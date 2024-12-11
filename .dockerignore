@@ -1,0 +1,16 @@
+# Fly.io configuration
+fly.toml
+
+# Version control metadata
+.git/
+
+# SQLite database files
+*.sqlite3
+
+# Environment variables
+.env
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
