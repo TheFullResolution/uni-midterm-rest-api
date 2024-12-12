@@ -1,0 +1,47 @@
+desc,index,name,subsections,url
+"# Combat
+",combat,Combat,[0x14000270d40 0x14000270d80 0x14000270e00 0x14000270e40 0x14000270ea0 0x14000270ee0 0x14000270f40 0x14000270f80],/api/rules/combat
+"# Using Ability Scores
+
+Six abilities provide a quick description of every creature's physical and mental characteristics:
+- **Strength**, measuring physical power
+- **Dexterity**, measuring agility
+- **Constitution**, measuring endurance
+- **Intelligence**, measuring reasoning and memory
+- **Wisdom**, measuring perception and insight
+- **Charisma**, measuring force of personality
+
+Is a character muscle-bound and insightful? Brilliant and charming? Nimble and hardy? Ability scores define these qualities-a creature's assets as well as weaknesses.
+
+The three main rolls of the game-the ability check, the saving throw, and the attack roll-rely on the six ability scores. The book's introduction describes the basic rule behind these rolls: roll a d20, add an ability modifier derived from one of the six ability scores, and compare the total to a target number.
+
+**Ability Scores and Modifiers** Each of a creature's abilities has a score, a number that defines the magnitude of that ability. An ability score is not just a measure of innate capabilities, but also encompasses a creature's training and competence in activities related to that ability.
+
+A score of 10 or 11 is the normal human average, but adventurers and many monsters are a cut above average in most abilities. A score of 18 is the highest that a person usually reaches. Adventurers can have scores as high as 20, and monsters and divine beings can have scores as high as 30.
+
+Each ability also has a modifier, derived from the score and ranging from -5 (for an ability score of 1) to +10 (for a score of 30). The Ability Scores and Modifiers table notes the ability modifiers for the range of possible ability scores, from 1 to 30.
+",using-ability-scores,Using Ability Scores,[0x14000271020 0x14000271060 0x140002710e0 0x14000271120 0x14000271160 0x140002711c0],/api/rules/using-ability-scores
+"# Adventuring
+",adventuring,Adventuring,[0x14000271280 0x140002712c0 0x14000271320 0x14000271360 0x140002713a0 0x14000271400 0x14000271440 0x14000271480],/api/rules/adventuring
+"# Spellcasting
+
+Magic permeates fantasy gaming worlds and often appears in the form of a spell.
+
+This chapter provides the rules for casting spells. Different character classes have distinctive ways of learning and preparing their spells, and monsters use spells in unique ways. Regardless of its source, a spell follows the rules here.
+",spellcasting,Spellcasting,[0x14000271500 0x14000271540],/api/rules/spellcasting
+"# Equipment
+
+Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).
+
+With one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The old piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don't usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.
+
+One gold piece is worth ten silver pieces, the most prevalent coin among commoners. A silver piece buys a laborer's work for half a day, a flask of lamp oil, or a night's rest in a poor inn.
+
+One silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of chalk.
+
+In addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.
+
+A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
+",equipment,Equipment,[0x140002715e0 0x14000271620 0x14000271680 0x140002716c0 0x14000271700 0x14000271740 0x14000271780],/api/rules/equipment
+"# Appendix
+",appendix,Appendix,[0x14000271820 0x14000271860],/api/rules/appendix

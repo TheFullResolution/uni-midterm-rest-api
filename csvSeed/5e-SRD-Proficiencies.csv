@@ -1,0 +1,118 @@
+classes,index,name,races,reference,type,url
+[0x1400021d200 0x1400021d240 0x1400021d2a0 0x1400021d300 0x1400021d340 0x1400021d380 0x1400021d3e0],light-armor,Light Armor,[],&{[index name url] map[index:light-armor name:Light Armor url:/api/equipment-categories/light-armor]},Armor,/api/proficiencies/light-armor
+[0x1400021d4c0 0x1400021d500 0x1400021d560 0x1400021d5c0],medium-armor,Medium Armor,[],&{[index name url] map[index:medium-armor name:Medium Armor url:/api/equipment-categories/medium-armor]},Armor,/api/proficiencies/medium-armor
+[],heavy-armor,Heavy Armor,[],&{[index name url] map[index:heavy-armor name:Heavy Armor url:/api/equipment-categories/heavy-armor]},Armor,/api/proficiencies/heavy-armor
+[0x1400021d740 0x1400021d780],all-armor,All armor,[],&{[index name url] map[index:armor name:Armor url:/api/equipment-categories/armor]},Armor,/api/proficiencies/all-armor
+[],padded-armor,Padded Armor,[],&{[index name url] map[index:padded-armor name:Padded Armor url:/api/equipment/padded-armor]},Armor,/api/proficiencies/padded-armor
+[],leather-armor,Leather Armor,[],&{[index name url] map[index:leather-armor name:Leather Armor url:/api/equipment/leather-armor]},Armor,/api/proficiencies/leather-armor
+[],studded-leather-armor,Studded Leather Armor,[],&{[index name url] map[index:studded-leather-armor name:Studded Leather Armor url:/api/equipment/studded-leather-armor]},Armor,/api/proficiencies/studded-leather-armor
+[],hide-armor,Hide Armor,[],&{[index name url] map[index:hide-armor name:Hide Armor url:/api/equipment/hide-armor]},Armor,/api/proficiencies/hide-armor
+[],chain-shirt,Chain Shirt,[],&{[index name url] map[index:chain-shirt name:Chain Shirt url:/api/equipment/chain-shirt]},Armor,/api/proficiencies/chain-shirt
+[],scale-mail,Scale Mail,[],&{[index name url] map[index:scale-mail name:Scale Mail url:/api/equipment/scale-mail]},Armor,/api/proficiencies/scale-mail
+[],breastplate,Breastplate,[],&{[index name url] map[index:breastplate name:Breastplate url:/api/equipment/breastplate]},Armor,/api/proficiencies/breastplate
+[],half-plate-armor,Half Plate Armor,[],&{[index name url] map[index:half-plate-armor name:Half Plate Armor url:/api/equipment/half-plate-armor]},Armor,/api/proficiencies/half-plate-armor
+[],ring-mail,Ring Mail,[],&{[index name url] map[index:ring-mail name:Ring Mail url:/api/equipment/ring-mail]},Armor,/api/proficiencies/ring-mail
+[],chain-mail,Chain Mail,[],&{[index name url] map[index:chain-mail name:Chain Mail url:/api/equipment/chain-mail]},Armor,/api/proficiencies/chain-mail
+[],splint-armor,Splint Armor,[],&{[index name url] map[index:splint-armor name:Splint Armor url:/api/equipment/splint-armor]},Armor,/api/proficiencies/splint-armor
+[],plate-armor,Plate Armor,[],&{[index name url] map[index:plate-armor name:Plate Armor url:/api/equipment/plate-armor]},Armor,/api/proficiencies/plate-armor
+[0x14000240000 0x14000240040 0x140002400a0 0x140002400e0 0x14000240120 0x14000240180],shields,Shields,[],&{[index name url] map[index:shield name:Shield url:/api/equipment/shield]},Armor,/api/proficiencies/shields
+[0x14000240260 0x140002402a0 0x14000240320 0x14000240360 0x140002403a0 0x140002403e0 0x14000240420 0x14000240480 0x140002404c0],simple-weapons,Simple Weapons,[],&{[index name url] map[index:simple-weapons name:Simple Weapons url:/api/equipment-categories/simple-weapons]},Weapons,/api/proficiencies/simple-weapons
+[0x140002405a0 0x140002405e0 0x14000240640 0x140002406a0],martial-weapons,Martial Weapons,[],&{[index name url] map[index:martial-weapons name:Martial Weapons url:/api/equipment-categories/martial-weapons]},Weapons,/api/proficiencies/martial-weapons
+[0x14000240760],clubs,Clubs,[],&{[index name url] map[index:club name:Club url:/api/equipment/club]},Weapons,/api/proficiencies/clubs
+[0x14000240820 0x14000240860 0x140002408c0],daggers,Daggers,[],&{[index name url] map[index:dagger name:Dagger url:/api/equipment/dagger]},Weapons,/api/proficiencies/daggers
+[],greatclubs,Greatclubs,[],&{[index name url] map[index:greatclub name:Greatclub url:/api/equipment/greatclub]},Weapons,/api/proficiencies/greatclubs
+[],handaxes,Handaxes,[0x14000240a20],&{[index name url] map[index:handaxe name:Handaxe url:/api/equipment/handaxe]},Weapons,/api/proficiencies/handaxes
+[0x14000240ae0],javelins,Javelins,[],&{[index name url] map[index:javelin name:Javelin url:/api/equipment/javelin]},Weapons,/api/proficiencies/javelins
+[],light-hammers,Light hammers,[0x14000240ba0],&{[index name url] map[index:light-hammer name:Light hammer url:/api/equipment/light-hammer]},Weapons,/api/proficiencies/light-hammers
+[0x14000240c60],maces,Maces,[],&{[index name url] map[index:mace name:Mace url:/api/equipment/mace]},Weapons,/api/proficiencies/maces
+[0x14000240d40 0x14000240d80 0x14000240de0],quarterstaffs,Quarterstaffs,[],&{[index name url] map[index:quarterstaff name:Quarterstaff url:/api/equipment/quarterstaff]},Weapons,/api/proficiencies/quarterstaffs
+[0x14000240ea0],sickles,Sickles,[],&{[index name url] map[index:sickle name:Sickle url:/api/equipment/sickle]},Weapons,/api/proficiencies/sickles
+[0x14000240f80],spears,Spears,[],&{[index name url] map[index:spear name:Spear url:/api/equipment/spear]},Weapons,/api/proficiencies/spears
+[0x14000241060 0x140002410a0],crossbows-light,"Crossbows, light",[],"&{[index name url] map[index:crossbow-light name:Crossbow, light url:/api/equipment/crossbow-light]}",Weapons,/api/proficiencies/crossbows-light
+[0x140002411a0 0x14000241200 0x14000241260],darts,Darts,[],&{[index name url] map[index:dart name:Dart url:/api/equipment/dart]},Weapons,/api/proficiencies/darts
+[],shortbows,Shortbows,[0x14000241340],&{[index name url] map[index:shortbow name:Shortbow url:/api/equipment/shortbow]},Weapons,/api/proficiencies/shortbows
+[0x14000241420 0x14000241480 0x140002414e0],slings,Slings,[],&{[index name url] map[index:sling name:Sling url:/api/equipment/sling]},Weapons,/api/proficiencies/slings
+[],battleaxes,Battleaxes,[0x140002415c0],&{[index name url] map[index:battleaxe name:Battleaxe url:/api/equipment/battleaxe]},Weapons,/api/proficiencies/battleaxes
+[],flails,Flails,[],&{[index name url] map[index:flail name:Flail url:/api/equipment/flail]},Weapons,/api/proficiencies/flails
+[],glaives,Glaives,[],&{[index name url] map[index:glaive name:Glaive url:/api/equipment/glaive]},Weapons,/api/proficiencies/glaives
+[],greataxes,Greataxes,[],&{[index name url] map[index:greataxe name:Greataxe url:/api/equipment/greataxe]},Weapons,/api/proficiencies/greataxes
+[],greatswords,Greatswords,[],&{[index name url] map[index:greatsword name:Greatsword url:/api/equipment/greatsword]},Weapons,/api/proficiencies/greatswords
+[],halberds,Halberds,[],&{[index name url] map[index:halberd name:Halberd url:/api/equipment/halberd]},Weapons,/api/proficiencies/halberds
+[],lances,Lances,[],&{[index name url] map[index:lance name:Lance url:/api/equipment/lance]},Weapons,/api/proficiencies/lances
+[0x140002419a0 0x140002419e0],longswords,Longswords,[0x14000241a40],&{[index name url] map[index:longsword name:Longsword url:/api/equipment/longsword]},Weapons,/api/proficiencies/longswords
+[],mauls,Mauls,[],&{[index name url] map[index:maul name:Maul url:/api/equipment/maul]},Weapons,/api/proficiencies/mauls
+[],morningstars,Morningstars,[],&{[index name url] map[index:morningstar name:Morningstar url:/api/equipment/morningstar]},Weapons,/api/proficiencies/morningstars
+[],pikes,Pikes,[],&{[index name url] map[index:pike name:Pike url:/api/equipment/pike]},Weapons,/api/proficiencies/pikes
+[0x14000241cc0 0x14000241d20],rapiers,Rapiers,[],&{[index name url] map[index:rapier name:Rapier url:/api/equipment/rapier]},Weapons,/api/proficiencies/rapiers
+[0x14000241e00],scimitars,Scimitars,[],&{[index name url] map[index:scimitar name:Scimitar url:/api/equipment/scimitar]},Weapons,/api/proficiencies/scimitars
+[0x14000241ee0 0x14000241f20 0x1400025c000],shortswords,Shortswords,[0x1400025c040],&{[index name url] map[index:shortsword name:Shortsword url:/api/equipment/shortsword]},Weapons,/api/proficiencies/shortswords
+[],tridents,Tridents,[],&{[index name url] map[index:trident name:Trident url:/api/equipment/trident]},Weapons,/api/proficiencies/tridents
+[],war-picks,War picks,[],&{[index name url] map[index:war-pick name:War pick url:/api/equipment/war-pick]},Weapons,/api/proficiencies/war-picks
+[],warhammers,Warhammers,[0x1400025c240],&{[index name url] map[index:warhammer name:Warhammer url:/api/equipment/warhammer]},Weapons,/api/proficiencies/warhammers
+[],whips,Whips,[],&{[index name url] map[index:whip name:Whip url:/api/equipment/whip]},Weapons,/api/proficiencies/whips
+[],blowguns,Blowguns,[],&{[index name url] map[index:blowgun name:Blowgun url:/api/equipment/blowgun]},Weapons,/api/proficiencies/blowguns
+[0x1400025c400 0x1400025c440],hand-crossbows,Hand crossbows,[],"&{[index name url] map[index:crossbow-hand name:Crossbow, hand url:/api/equipment/crossbow-hand]}",Weapons,/api/proficiencies/hand-crossbows
+[],crossbows-heavy,"Crossbows, heavy",[],"&{[index name url] map[index:crossbow-heavy name:Crossbow, heavy url:/api/equipment/crossbow-heavy]}",Weapons,/api/proficiencies/crossbows-heavy
+[],longbows,Longbows,[0x1400025c5e0],&{[index name url] map[index:longbow name:Longbow url:/api/equipment/longbow]},Weapons,/api/proficiencies/longbows
+[],nets,Nets,[],&{[index name url] map[index:net name:Net url:/api/equipment/net]},Weapons,/api/proficiencies/nets
+[],alchemists-supplies,Alchemist's Supplies,[],&{[index name url] map[index:alchemists-supplies name:Alchemist's Supplies url:/api/equipment/alchemists-supplies]},Artisan's Tools,/api/proficiencies/alchemists-supplies
+[],brewers-supplies,Brewer's Supplies,[],&{[index name url] map[index:brewers-supplies name:Brewer's Supplies url:/api/equipment/brewers-supplies]},Artisan's Tools,/api/proficiencies/brewers-supplies
+[],calligraphers-supplies,Calligrapher's Supplies,[],&{[index name url] map[index:calligraphers-supplies name:Calligrapher's Supplies url:/api/equipment/calligraphers-supplies]},Artisan's Tools,/api/proficiencies/calligraphers-supplies
+[],carpenters-tools,Carpenter's Tools,[],&{[index name url] map[index:carpenters-tools name:Carpenter's Tools url:/api/equipment/carpenters-tools]},Artisan's Tools,/api/proficiencies/carpenters-tools
+[],cartographers-tools,Cartographer's Tools,[],&{[index name url] map[index:cartographers-tools name:Cartographer's Tools url:/api/equipment/cartographers-tools]},Artisan's Tools,/api/proficiencies/cartographers-tools
+[],cobblers-tools,Cobbler's Tools,[],&{[index name url] map[index:cobblers-tools name:Cobbler's Tools url:/api/equipment/cobblers-tools]},Artisan's Tools,/api/proficiencies/cobblers-tools
+[],cooks-utensils,Cook's utensils,[],&{[index name url] map[index:cooks-utensils name:Cook's utensils url:/api/equipment/cooks-utensils]},Artisan's Tools,/api/proficiencies/cooks-utensils
+[],glassblowers-tools,Glassblower's Tools,[],&{[index name url] map[index:glassblowers-tools name:Glassblower's Tools url:/api/equipment/glassblowers-tools]},Artisan's Tools,/api/proficiencies/glassblowers-tools
+[],jewelers-tools,Jeweler's Tools,[],&{[index name url] map[index:jewelers-tools name:Jeweler's Tools url:/api/equipment/jewelers-tools]},Artisan's Tools,/api/proficiencies/jewelers-tools
+[],leatherworkers-tools,Leatherworker's Tools,[],&{[index name url] map[index:leatherworkers-tools name:Leatherworker's Tools url:/api/equipment/leatherworkers-tools]},Artisan's Tools,/api/proficiencies/leatherworkers-tools
+[],masons-tools,Mason's Tools,[],&{[index name url] map[index:masons-tools name:Mason's Tools url:/api/equipment/masons-tools]},Artisan's Tools,/api/proficiencies/masons-tools
+[],painters-supplies,Painter's Supplies,[],&{[index name url] map[index:painters-supplies name:Painter's Supplies url:/api/equipment/painters-supplies]},Artisan's Tools,/api/proficiencies/painters-supplies
+[],potters-tools,Potter's Tools,[],&{[index name url] map[index:potters-tools name:Potter's Tools url:/api/equipment/potters-tools]},Artisan's Tools,/api/proficiencies/potters-tools
+[],smiths-tools,Smith's Tools,[],&{[index name url] map[index:smiths-tools name:Smith's Tools url:/api/equipment/smiths-tools]},Artisan's Tools,/api/proficiencies/smiths-tools
+[],tinkers-tools,Tinker's Tools,[],&{[index name url] map[index:tinkers-tools name:Tinker's Tools url:/api/equipment/tinkers-tools]},Artisan's Tools,/api/proficiencies/tinkers-tools
+[],weavers-tools,Weaver's Tools,[],&{[index name url] map[index:weavers-tools name:Weaver's Tools url:/api/equipment/weavers-tools]},Artisan's Tools,/api/proficiencies/weavers-tools
+[],woodcarvers-tools,Woodcarver's Tools,[],&{[index name url] map[index:woodcarvers-tools name:Woodcarver's Tools url:/api/equipment/woodcarvers-tools]},Artisan's Tools,/api/proficiencies/woodcarvers-tools
+[],disguise-kit,Disguise Kit,[],&{[index name url] map[index:disguise-kit name:Disguise Kit url:/api/equipment/disguise-kit]},Artisan's Tools,/api/proficiencies/disguise-kit
+[],forgery-kit,Forgery Kit,[],&{[index name url] map[index:forgery-kit name:Forgery Kit url:/api/equipment/forgery-kit]},Artisan's Tools,/api/proficiencies/forgery-kit
+[],dice-set,Dice Set,[],&{[index name url] map[index:dice-set name:Dice Set url:/api/equipment/dice-set]},Gaming Sets,/api/proficiencies/dice-set
+[],playing-card-set,Playing Card Set,[],&{[index name url] map[index:playing-card-set name:Playing Card Set url:/api/equipment/playing-card-set]},Gaming Sets,/api/proficiencies/playing-card-set
+[],bagpipes,Bagpipes,[],&{[index name url] map[index:bagpipes name:Bagpipes url:/api/equipment/bagpipes]},Musical Instruments,/api/proficiencies/bagpipes
+[],drum,Drum,[],&{[index name url] map[index:drum name:Drum url:/api/equipment/drum]},Musical Instruments,/api/proficiencies/drum
+[],dulcimer,Dulcimer,[],&{[index name url] map[index:dulcimer name:Dulcimer url:/api/equipment/dulcimer]},Musical Instruments,/api/proficiencies/dulcimer
+[],flute,Flute,[],&{[index name url] map[index:flute name:Flute url:/api/equipment/flute]},Musical Instruments,/api/proficiencies/flute
+[],lute,Lute,[],&{[index name url] map[index:lute name:Lute url:/api/equipment/lute]},Musical Instruments,/api/proficiencies/lute
+[],lyre,Lyre,[],&{[index name url] map[index:lyre name:Lyre url:/api/equipment/lyre]},Musical Instruments,/api/proficiencies/lyre
+[],horn,Horn,[],&{[index name url] map[index:horn name:Horn url:/api/equipment/horn]},Musical Instruments,/api/proficiencies/horn
+[],pan-flute,Pan flute,[],&{[index name url] map[index:pan-flute name:Pan flute url:/api/equipment/pan-flute]},Musical Instruments,/api/proficiencies/pan-flute
+[],shawm,Shawm,[],&{[index name url] map[index:shawm name:Shawm url:/api/equipment/shawm]},Musical Instruments,/api/proficiencies/shawm
+[],viol,Viol,[],&{[index name url] map[index:viol name:Viol url:/api/equipment/viol]},Musical Instruments,/api/proficiencies/viol
+[0x1400025d860],herbalism-kit,Herbalism Kit,[],&{[index name url] map[index:herbalism-kit name:Herbalism Kit url:/api/equipment/herbalism-kit]},Other,/api/proficiencies/herbalism-kit
+[],navigators-tools,Navigator's Tools,[],&{[index name url] map[index:navigators-tools name:Navigator's Tools url:/api/equipment/navigators-tools]},Other,/api/proficiencies/navigators-tools
+[],poisoners-kit,Poisoner's Kit,[],&{[index name url] map[index:poisoners-kit name:Poisoner's Kit url:/api/equipment/poisoners-kit]},Other,/api/proficiencies/poisoners-kit
+[0x1400025da40],thieves-tools,Thieves' Tools,[],&{[index name url] map[index:thieves-tools name:Thieves' Tools url:/api/equipment/thieves-tools]},Other,/api/proficiencies/thieves-tools
+[],land-vehicles,Land Vehicles,[],&{[index name url] map[index:land-vehicles name:Land Vehicles url:/api/equipment-categories/land-vehicles]},Vehicles,/api/proficiencies/land-vehicles
+[],water-vehicles,Water Vehicles,[],&{[index name url] map[index:waterborne-vehicles name:Waterborne Vehicles url:/api/equipment-categories/waterborne-vehicles]},Vehicles,/api/proficiencies/water-vehicles
+[0x1400025dc40 0x1400025dc80 0x1400025dce0 0x1400025dd20],saving-throw-str,Saving Throw: STR,[],&{[index name url] map[index:str name:STR url:/api/ability-scores/str]},Saving Throws,/api/proficiencies/saving-throw-str
+[0x1400025dde0 0x1400025de20 0x1400025de80 0x1400025dec0],saving-throw-dex,Saving Throw: DEX,[],&{[index name url] map[index:dex name:DEX url:/api/ability-scores/dex]},Saving Throws,/api/proficiencies/saving-throw-dex
+[0x14000278000 0x14000278040 0x140002780a0],saving-throw-con,Saving Throw: CON,[],&{[index name url] map[index:con name:CON url:/api/ability-scores/con]},Saving Throws,/api/proficiencies/saving-throw-con
+[0x14000278180 0x140002781c0 0x14000278220],saving-throw-int,Saving Throw: INT,[],&{[index name url] map[index:int name:INT url:/api/ability-scores/int]},Saving Throws,/api/proficiencies/saving-throw-int
+[0x14000278300 0x14000278340 0x140002783a0 0x140002783e0 0x14000278420],saving-throw-wis,Saving Throw: WIS,[],&{[index name url] map[index:wis name:WIS url:/api/ability-scores/wis]},Saving Throws,/api/proficiencies/saving-throw-wis
+[0x14000278520 0x14000278560 0x140002785e0 0x14000278620 0x14000278680],saving-throw-cha,Saving Throw: CHA,[],&{[index name url] map[index:cha name:CHA url:/api/ability-scores/cha]},Saving Throws,/api/proficiencies/saving-throw-cha
+[],skill-acrobatics,Skill: Acrobatics,[],&{[index name url] map[index:acrobatics name:Acrobatics url:/api/skills/acrobatics]},Skills,/api/proficiencies/skill-acrobatics
+[],skill-animal-handling,Skill: Animal Handling,[],&{[index name url] map[index:animal-handling name:Animal Handling url:/api/skills/animal-handling]},Skills,/api/proficiencies/skill-animal-handling
+[],skill-arcana,Skill: Arcana,[],&{[index name url] map[index:arcana name:Arcana url:/api/skills/arcana]},Skills,/api/proficiencies/skill-arcana
+[],skill-athletics,Skill: Athletics,[],&{[index name url] map[index:athletics name:Athletics url:/api/skills/athletics]},Skills,/api/proficiencies/skill-athletics
+[],skill-deception,Skill: Deception,[],&{[index name url] map[index:deception name:Deception url:/api/skills/deception]},Skills,/api/proficiencies/skill-deception
+[],skill-history,Skill: History,[],&{[index name url] map[index:history name:History url:/api/skills/history]},Skills,/api/proficiencies/skill-history
+[],skill-insight,Skill: Insight,[],&{[index name url] map[index:insight name:Insight url:/api/skills/insight]},Skills,/api/proficiencies/skill-insight
+[],skill-intimidation,Skill: Intimidation,[],&{[index name url] map[index:intimidation name:Intimidation url:/api/skills/intimidation]},Skills,/api/proficiencies/skill-intimidation
+[],skill-investigation,Skill: Investigation,[],&{[index name url] map[index:investigation name:Investigation url:/api/skills/investigation]},Skills,/api/proficiencies/skill-investigation
+[],skill-medicine,Skill: Medicine,[],&{[index name url] map[index:medicine name:Medicine url:/api/skills/medicine]},Skills,/api/proficiencies/skill-medicine
+[],skill-nature,Skill: Nature,[],&{[index name url] map[index:nature name:Nature url:/api/skills/nature]},Skills,/api/proficiencies/skill-nature
+[],skill-perception,Skill: Perception,[0x14000278d60],&{[index name url] map[index:perception name:Perception url:/api/skills/perception]},Skills,/api/proficiencies/skill-perception
+[],skill-performance,Skill: Performance,[],&{[index name url] map[index:performance name:Performance url:/api/skills/performance]},Skills,/api/proficiencies/skill-performance
+[],skill-persuasion,Skill: Persuasion,[],&{[index name url] map[index:persuasion name:Persuasion url:/api/skills/persuasion]},Skills,/api/proficiencies/skill-persuasion
+[],skill-religion,Skill: Religion,[],&{[index name url] map[index:religion name:Religion url:/api/skills/religion]},Skills,/api/proficiencies/skill-religion
+[],skill-sleight-of-hand,Skill: Sleight of Hand,[],&{[index name url] map[index:sleight-of-hand name:Sleight of Hand url:/api/skills/sleight-of-hand]},Skills,/api/proficiencies/skill-sleight-of-hand
+[],skill-stealth,Skill: Stealth,[],&{[index name url] map[index:stealth name:Stealth url:/api/skills/stealth]},Skills,/api/proficiencies/skill-stealth
+[],skill-survival,Skill: Survival,[],&{[index name url] map[index:survival name:Survival url:/api/skills/survival]},Skills,/api/proficiencies/skill-survival
