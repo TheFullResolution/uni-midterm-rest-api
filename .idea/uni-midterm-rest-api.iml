@@ -3,9 +3,9 @@
   <component name="FacetManager">
     <facet type="django" name="Django">
       <configuration>
-        <option name="rootFolder" value="$MODULE_DIR$/dndRestAPI" />
+        <option name="rootFolder" value="$MODULE_DIR$" />
         <option name="settingsModule" value="dndRestAPI/settings.py" />
-        <option name="manageScript" value="$MODULE_DIR$/dndRestAPI/manage.py" />
+        <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
         <option name="doNotUseTestRunner" value="false" />
         <option name="trackFilePattern" value="migrations" />
