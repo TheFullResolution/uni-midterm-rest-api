@@ -1,0 +1,320 @@
+attack_type,casting_time,concentration,duration,index,level,material,name,range,ritual,school_index,school_name
+ranged,1 action,False,Instantaneous,acid-arrow,2,Powdered rhubarb leaf and an adder's stomach.,Acid Arrow,90 feet,False,evocation,Evocation
+,1 action,False,Instantaneous,acid-splash,0,,Acid Splash,60 feet,False,conjuration,Conjuration
+,1 action,False,8 hours,aid,2,A tiny strip of white cloth.,Aid,30 feet,False,abjuration,Abjuration
+,1 minute,False,8 hours,alarm,1,A tiny bell and a piece of fine silver wire.,Alarm,30 feet,True,abjuration,Abjuration
+,1 action,True,Up to 1 hour,alter-self,2,,Alter Self,Self,False,transmutation,Transmutation
+,1 action,False,24 hours,animal-friendship,1,A morsel of food.,Animal Friendship,30 feet,False,enchantment,Enchantment
+,1 action,False,24 hours,animal-messenger,2,A morsel of food.,Animal Messenger,30 feet,True,enchantment,Enchantment
+,1 action,True,Up to 24 hours,animal-shapes,8,,Animal Shapes,30 feet,False,transmutation,Transmutation
+,1 minute,False,Instantaneous,animate-dead,3,"A drop of blood, a piece of flesh, and a pinch of bone dust.",Animate Dead,10 feet,False,necromancy,Necromancy
+,1 action,True,Up to 1 minute,animate-objects,5,,Animate Objects,120 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 hour,antilife-shell,5,,Antilife Shell,Self,False,abjuration,Abjuration
+,1 action,True,Up to 1 hour,antimagic-field,8,A pinch of powdered iron or iron filings.,Antimagic Field,Self,False,abjuration,Abjuration
+,1 hour,False,10 days,antipathy-sympathy,8,Either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect.,Antipathy/Sympathy,60 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 hour,arcane-eye,4,A bit of bat fur.,Arcane Eye,30 feet,False,divination,Divination
+,1 action,True,Up to 1 minute,arcane-hand,5,An eggshell and a snakeskin glove.,Arcane Hand,120 feet,False,evocation,Evocation
+,1 action,False,Until dispelled,arcane-lock,2,"Gold dust worth at least 25gp, which the spell consumes.",Arcane Lock,Touch,False,abjuration,Abjuration
+melee,1 action,True,Up to 1 minute,arcane-sword,7,"A miniature platinum sword with a grip and pommel of copper and zinc, worth 250 gp.",Arcane Sword,60 feet,False,evocation,Evocation
+,1 action,False,24 hours,arcanists-magic-aura,2,A small square of silk.,Arcanist's Magic Aura,Touch,False,illusion,Illusion
+,1 hour,False,Special,astral-projection,9,"For each creature you affect with this spell, you must provide one jacinth worth at least 1,000gp and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes.",Astral Projection,10 feet,False,necromancy,Necromancy
+,1 minute,False,Instantaneous,augury,2,"Specially marked sticks, bones, or similar tokens worth at least 25gp.",Augury,Self,True,divination,Divination
+,8 hours,False,Instantaneous,awaken,5,"An agate worth at least 1,000 gp, which the spell consumes.",Awaken,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,bane,1,A drop of blood.,Bane,30 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,banishment,4,An item distasteful to the target.,Banishment,60 feet,False,abjuration,Abjuration
+,1 action,True,Up to 1 hour,barkskin,2,A handful of oak bark.,Barkskin,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,beacon-of-hope,3,,Beacon of Hope,30 feet,False,abjuration,Abjuration
+,1 action,True,Up to 1 minute,bestow-curse,3,,Bestow Curse,Touch,False,necromancy,Necromancy
+,1 action,True,Up to 1 minute,black-tentacles,4,A piece of tentacle from a giant octopus or a giant squid,Black Tentacles,90 feet,False,conjuration,Conjuration
+,1 action,True,Up to 10 minutes,blade-barrier,6,,Blade Barrier,90 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,bless,1,A sprinkling of holy water.,Bless,30 feet,False,enchantment,Enchantment
+,1 action,False,Instantaneous,blight,4,,Blight,30 feet,False,necromancy,Necromancy
+,1 action,False,1 minute,blindness-deafness,2,,Blindness/Deafness,30 feet,False,necromancy,Necromancy
+,1 action,False,1 minute,blink,3,,Blink,Self,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,blur,2,,Blur,Self,False,illusion,Illusion
+,1 bonus action,True,Up to 1 minute,branding-smite,2,,Branding Smite,Self,False,evocation,Evocation
+,1 action,False,Instantaneous,burning-hands,1,,Burning Hands,Self,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,call-lightning,3,,Call Lightning,120 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,calm-emotions,2,,Calm Emotions,60 feet,False,enchantment,Enchantment
+,1 action,False,Instantaneous,chain-lightning,6,"A bit of fur; a piece of amber, glass, or a crystal rod; and three silver pins.",Chain Lightning,150 feet,False,evocation,Evocation
+,1 action,False,1 hour,charm-person,1,,Charm Person,30 feet,False,enchantment,Enchantment
+ranged,1 action,False,1 round,chill-touch,0,,Chill Touch,120 feet,False,necromancy,Necromancy
+,1 action,False,Instantaneous,circle-of-death,6,The powder of a crushed black pearl worth at least 500 gp.,Circle of Death,150 feet,False,necromancy,Necromancy
+,10 minutes,True,Up to 10 minutes,clairvoyance,3,"A focus worth at least 100gp, either a jeweled horn for hearing or a glass eye for seeing.",Clairvoyance,1 mile,False,divination,Divination
+,1 hour,False,Instantaneous,clone,8,"A diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water.",Clone,Touch,False,necromancy,Necromancy
+,1 action,True,Up to 10 minutes,cloudkill,5,,Cloudkill,120 feet,False,conjuration,Conjuration
+,1 action,False,1 round,color-spray,1,"A pinch of powder or sand that is colored red, yellow, and blue.",Color Spray,Self,False,illusion,Illusion
+,1 action,False,1 round,command,1,,Command,60 feet,False,enchantment,Enchantment
+,1 minute,False,1 minute,commune,5,Incense and a vial of holy or unholy water.,Commune,Self,True,divination,Divination
+,1 minute,False,Instantaneous,commune-with-nature,5,,Commune With Nature,Self,True,divination,Divination
+,1 action,False,1 hour,comprehend-languages,1,A pinch of soot and salt.,Comprehend Languages,Self,True,divination,Divination
+,1 action,True,Up to 1 minute,compulsion,4,,Compulsion,30 feet,False,enchantment,Enchantment
+,1 action,False,Instantaneous,cone-of-cold,5,A small crystal or glass cone.,Cone of Cold,Self,False,evocation,Evocation
+,1 action,True,Up to 1 minute,confusion,4,Three walnut shells.,Confusion,90 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 hour,conjure-animals,3,,Conjure Animals,60 feet,False,conjuration,Conjuration
+,1 minute,True,Up to 1 hour,conjure-celestial,7,,Conjure Celestial,90 feet,False,conjuration,Conjuration
+,1 minute,True,Up to 1 hour,conjure-elemental,5,"Burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water.",Conjure Elemental,90 feet,False,conjuration,Conjuration
+,1 minute,True,Up to 1 hour,conjure-fey,6,,Conjure Fey,90 feet,False,conjuration,Conjuration
+,1 minute,True,Up to 1 hour,conjure-minor-elementals,4,,Conjure Minor Elementals,90 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 hour,conjure-woodland-beings,4,One holly berry per creature summoned.,Conjure Woodland Beings,60 feet,False,conjuration,Conjuration
+,1 minute,False,1 minute,contact-other-plane,5,,Contact Other Plane,Self,True,divination,Divination
+melee,1 action,False,7 days,contagion,5,,Contagion,Touch,False,necromancy,Necromancy
+,10 minutes,False,10 days,contingency,6,"A statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp.",Contingency,Self,False,evocation,Evocation
+,1 action,False,Until dispelled,continual-flame,2,"Ruby dust worth 50 gp, which the spell consumes.",Continual Flame,Touch,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,control-water,4,A drop of water and a pinch of dust.,Control Water,300 feet,False,transmutation,Transmutation
+,10 minutes,True,Up to 8 hours,control-weather,8,Burning incense and bits of earth and wood mixed in water.,Control Weather,Self,False,transmutation,Transmutation
+,1 reaction,False,Instantaneous,counterspell,3,,Counterspell,60 feet,False,abjuration,Abjuration
+,1 action,False,Instantaneous,create-food-and-water,3,,Create Food and Water,30 feet,False,conjuration,Conjuration
+,1 minute,False,Instantaneous,create-undead,6,"One clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse.",Create Undead,10 feet,False,necromancy,Necromancy
+,1 action,False,Instantaneous,create-or-destroy-water,1,"A drop of water if creating water, or a few grains of sand if destroying it.",Create or Destroy Water,30 feet,False,transmutation,Transmutation
+,1 minute,False,Special,creation,5,A tiny piece of matter of the same type of the item you plan to create.,Creation,30 feet,False,illusion,Illusion
+,1 action,False,Instantaneous,cure-wounds,1,,Cure Wounds,Touch,False,evocation,Evocation
+,1 action,True,Up to 1 minute,dancing-lights,0,"A bit of phosphorus or wychwood, or a glowworm.",Dancing Lights,120 feet,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,darkness,2,Bat fur and a drop of pitch or piece of coal.,Darkness,60 feet,False,evocation,Evocation
+,1 action,False,8 hours,darkvision,2,Either a pinch of dried carrot or an agate.,Darkvision,Touch,False,transmutation,Transmutation
+,1 action,False,1 hour,daylight,3,,Daylight,60 feet,False,evocation,Evocation
+,1 action,False,8 hours,death-ward,4,,Death Ward,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 1 minute,delayed-blast-fireball,7,A tiny ball of bat guano and sulfur.,Delayed Blast Fireball,150 feet,False,evocation,Evocation
+,1 action,False,1 hour,demiplane,8,,Demiplane,60 feet,False,conjuration,Conjuration
+,1 action,True,Up to 10 minutes,detect-evil-and-good,1,,Detect Evil and Good,Self,False,divination,Divination
+,1 action,True,Up to 10 minutes,detect-magic,1,,Detect Magic,Self,True,divination,Divination
+,1 action,True,Up to 10 minutes,detect-poison-and-disease,1,A yew leaf.,Detect Poison and Disease,Self,True,divination,Divination
+,1 action,True,Up to 1 minute,detect-thoughts,2,A copper coin.,Detect Thoughts,Self,False,divination,Divination
+,1 action,False,Instantaneous,dimension-door,4,,Dimension Door,500 feet,False,conjuration,Conjuration
+,1 action,False,1 hour,disguise-self,1,,Disguise Self,Self,False,illusion,Illusion
+,1 action,False,Instantaneous,disintegrate,6,A lodestone and a pinch of dust.,Disintegrate,60 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,dispel-evil-and-good,5,Holy water or powdered silver and iron.,Dispel Evil and Good,Self,False,abjuration,Abjuration
+,1 action,False,Instantaneous,dispel-magic,3,,Dispel Magic,120 feet,False,abjuration,Abjuration
+,1 action,False,Instantaneous,divination,4,"Incense and a sacrificial offering appropriate to your religion, together worth at least 25gp, which the spell consumes.",Divination,Self,True,divination,Divination
+,1 bonus action,True,Up to 1 minute,divine-favor,1,,Divine Favor,Self,False,evocation,Evocation
+,1 bonus action,False,Instantaneous,divine-word,7,,Divine Word,30 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,dominate-beast,4,,Dominate Beast,60 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 hour,dominate-monster,8,,Dominate Monster,60 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,dominate-person,5,,Dominate Person,60 feet,False,enchantment,Enchantment
+,1 minute,False,8 hours,dream,5,"A handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird.",Dream,Special,False,illusion,Illusion
+,1 action,False,Instantaneous,druidcraft,0,,Druidcraft,30 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,earthquake,8,"A pinch of dirt, a piece of rock, and a lump of clay.",Earthquake,500 feet,False,evocation,Evocation
+ranged,1 action,False,Instantaneous,eldritch-blast,0,,Eldritch Blast,120 feet,False,evocation,Evocation
+,1 action,True,Up to 1 hour,enhance-ability,2,Fur or a feather from a beast.,Enhance Ability,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,enlarge-reduce,2,A pinch iron powder.,Enlarge/Reduce,30 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,entangle,1,,Entangle,90 feet,False,conjuration,Conjuration
+,1 action,False,1 minute,enthrall,2,,Enthrall,60 feet,False,enchantment,Enchantment
+,1 action,False,8 hours,etherealness,7,,Etherealness,Self,False,transmutation,Transmutation
+,1 bonus action,True,Up to 10 minutes,expeditious-retreat,1,,Expeditious Retreat,Self,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,eyebite,6,,Eyebite,Self,False,necromancy,Necromancy
+,10 minutes,False,Instantaneous,fabricate,4,,Fabricate,120 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,faerie-fire,1,,Faerie Fire,60 feet,False,evocation,Evocation
+melee,1 action,False,8 hours,faithful-hound,4,"A tiny silver whistle, a piece of bone, and a thread",Faithful Hound,30 feet,False,conjuration,Conjuration
+,1 action,False,1 hour,false-life,1,A small amount of alcohol or distilled spirits.,False Life,Self,False,necromancy,Necromancy
+,1 action,True,Up to 1 minute,fear,3,A white feather or the heart of a hen.,Fear,Self,False,illusion,Illusion
+,1 reaction,False,1 minute,feather-fall,1,A small feather or a piece of down.,Feather Fall,60 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,feeblemind,8,"A handful of clay, crystal, glass, or mineral spheres.",Feeblemind,150 feet,False,enchantment,Enchantment
+,1 hour,False,Instantaneous,find-familiar,1,"10gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier.",Find Familiar,10 feet,True,conjuration,Conjuration
+,10 minutes,False,Instantaneous,find-steed,2,,Find Steed,30 feet,False,conjuration,Conjuration
+,1 action,False,Instantaneous,find-traps,2,,Find Traps,120 feet,False,divination,Divination
+,1 minute,True,Up to 24 hours,find-the-path,6,"A set of divinatory tools--such as bones, ivory sticks, cards, teeth, or carved runes--worth 100gp and an object from the location you wish to find.",Find the Path,Self,False,divination,Divination
+,1 action,False,Instantaneous,finger-of-death,7,,Finger of Death,60 feet,False,necromancy,Necromancy
+ranged,1 action,False,Instantaneous,fire-bolt,0,,Fire Bolt,120 feet,False,evocation,Evocation
+,1 action,False,10 minutes,fire-shield,4,A little phosphorus or a firefly.,Fire Shield,Self,False,evocation,Evocation
+,1 action,False,Instantaneous,fire-storm,7,,Fire Storm,150 feet,False,evocation,Evocation
+,1 action,False,Instantaneous,fireball,3,A tiny ball of bat guano and sulfur.,Fireball,150 feet,False,evocation,Evocation
+,1 bonus action,True,Up to 10 minutes,flame-blade,2,Leaf of sumac.,Flame Blade,Self,False,evocation,Evocation
+,1 action,False,Instantaneous,flame-strike,5,Pinch of sulfur.,Flame Strike,60 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,flaming-sphere,2,"A bit of tallow, a pinch of brimstone, and a dusting of powdered iron.",Flaming Sphere,60 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,flesh-to-stone,6,"A pinch of lime, water, and earth.",Flesh to Stone,60 feet,False,transmutation,Transmutation
+,1 action,False,1 hour,floating-disk,1,A drop of mercury.,Floating Disk,30 feet,True,conjuration,Conjuration
+,1 action,True,Up to 10 minutes,fly,3,A wing feather from any bird.,Fly,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 hour,fog-cloud,1,,Fog Cloud,120 feet,False,conjuration,Conjuration
+,10 minutes,False,24 hours,forbiddance,6,"A sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp.",Forbiddance,Touch,True,abjuration,Abjuration
+,1 action,False,1 hour,forcecage,7,"Ruby dust worth 1,500 gp.",Forcecage,100 feet,False,evocation,Evocation
+,1 minute,False,8 hours,foresight,9,A hummingbird feather.,Foresight,Touch,False,divination,Divination
+,1 action,False,1 hour,freedom-of-movement,4,"A leather strap, bound around the arm or a similar appendage.",Freedom of Movement,Touch,False,abjuration,Abjuration
+,1 action,False,Instantaneous,freezing-sphere,6,A small crystal sphere.,Freezing Sphere,300 feet,False,evocation,Evocation
+,1 action,True,Up to 1 hour,gaseous-form,3,A bit of gauze and a wisp of smoke.,Gaseous Form,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,gate,9,"A diamond worth at least 5,000gp.",Gate,60 feet,False,conjuration,Conjuration
+,1 minute,False,30 days,geas,5,,Geas,60 feet,False,enchantment,Enchantment
+,1 action,False,10 days,gentle-repose,2,"A pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration.",Gentle Repose,Touch,True,necromancy,Necromancy
+,1 action,True,Up to 10 minutes,giant-insect,4,,Giant Insect,30 feet,False,transmutation,Transmutation
+,1 action,False,1 hour,glibness,8,,Glibness,Self,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,globe-of-invulnerability,6,A glass or crystal bead that shatters when the spell ends.,Globe of Invulnerability,Self,False,abjuration,Abjuration
+,1 hour,False,Until dispelled,glyph-of-warding,3,"Incense and powdered diamond worth at least 200 gp, which the spell consumes.",Glyph of Warding,Touch,False,abjuration,Abjuration
+,1 action,False,Instantaneous,goodberry,1,A sprig of mistletoe.,Goodberry,Touch,False,transmutation,Transmutation
+,1 action,False,1 minute,grease,1,A bit of pork rind or butter.,Grease,60 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,greater-invisibility,4,,Greater Invisibility,Touch,False,illusion,Illusion
+,1 action,False,Instantaneous,greater-restoration,5,"Diamond dust worth at least 100gp, which the spell consumes.",Greater Restoration,Touch,False,abjuration,Abjuration
+,1 action,False,8 hours,guardian-of-faith,4,,Guardian of Faith,30 feet,False,conjuration,Conjuration
+,10 minutes,False,24 hours,guards-and-wards,6,"Burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp.",Guards and Wards,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 1 minute,guidance,0,,Guidance,Touch,False,divination,Divination
+ranged,1 action,False,1 round,guiding-bolt,1,,Guiding Bolt,120 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,gust-of-wind,2,A legume seed.,Gust of Wind,Self,False,evocation,Evocation
+,24 hours,False,Until dispelled,hallow,5,"Herbs, oils, and incense worth at least 1,000 gp, which the spell consumes.",Hallow,Touch,False,evocation,Evocation
+,10 minutes,False,24 hours,hallucinatory-terrain,4,"A stone, a twig, and a bit of green plant.",Hallucinatory Terrain,300 feet,False,illusion,Illusion
+,1 action,False,Instantaneous,harm,6,,Harm,60 feet,False,necromancy,Necromancy
+,1 action,True,Up to 1 minute,haste,3,A shaving of licorice root.,Haste,30 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,heal,6,,Heal,60 feet,False,evocation,Evocation
+,1 bonus action,False,Instantaneous,healing-word,1,,Healing Word,60 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,heat-metal,2,A piece of iron and a flame.,Heat Metal,60 feet,False,transmutation,Transmutation
+,1 reaction,False,Instantaneous,hellish-rebuke,1,,Hellish Rebuke,60 feet,False,evocation,Evocation
+,10 minutes,False,Instantaneous,heroes-feast,6,"A gem-encrusted bowl worth at least 1,000gp, which the spell consumes.",Heroes' Feast,30 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,heroism,1,,Heroism,Touch,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,hideous-laughter,1,Tiny tarts and a feather that is waved in the air.,Hideous Laughter,30 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,hold-monster,5,A small piece of iron.,Hold Monster,90 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,hold-person,2,"A small, straight piece of iron.",Hold Person,60 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,holy-aura,8,"A tiny reliquary worth at least 1,000gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text.",Holy Aura,Self,False,abjuration,Abjuration
+,1 bonus action,True,Up to 1 hour,hunters-mark,1,,Hunter's Mark,90 feet,False,divination,Divination
+,1 action,True,Up to 1 minute,hypnotic-pattern,3,A glowing stick of incense or a crystal vial filled with phosphorescent material.,Hypnotic Pattern,120 feet,False,illusion,Illusion
+,1 action,False,Instantaneous,ice-storm,4,A pinch of dust and a few drops of water.,Ice Storm,300 feet,False,evocation,Evocation
+,1 minute,False,Instantaneous,identify,1,A pearl worth at least 100gp and an owl feather.,Identify,Touch,True,divination,Divination
+,1 minute,False,10 days,illusory-script,1,"A lead-based ink worth at least 10gp, which this spell consumes.",Illusory Script,Touch,True,illusion,Illusion
+,1 minute,False,Until dispelled,imprisonment,9,"A vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per Hit Die of the target.",Imprisonment,30 feet,False,abjuration,Abjuration
+,1 action,True,Up to 1 minute,incendiary-cloud,8,,Incendiary Cloud,150 feet,False,conjuration,Conjuration
+melee,1 action,False,Instantaneous,inflict-wounds,1,,Inflict Wounds,Touch,False,necromancy,Necromancy
+,1 action,True,Up to 10 minutes,insect-plague,5,"A few grains of sugar, some kernels of grain, and a smear of fat.",Insect Plague,300 feet,False,conjuration,Conjuration
+,1 minute,False,Until dispelled,instant-summons,6,"A sapphire worth 1,000 gp.",Instant Summons,Touch,True,conjuration,Conjuration
+,1 action,True,Up to 1 hour,invisibility,2,An eyelash encased in gum arabic.,Invisibility,Touch,False,illusion,Illusion
+,1 action,True,Up to 1 minute,irresistible-dance,6,,Irresistible Dance,30 feet,False,enchantment,Enchantment
+,1 action,False,1 minute,jump,1,A grasshopper's hind leg.,Jump,Touch,False,transmutation,Transmutation
+,1 action,False,Instantaneous,knock,2,,Knock,60 feet,False,transmutation,Transmutation
+,10 minutes,False,Instantaneous,legend-lore,5,"Incense worth at least 250 gp, which the spell consumes, and four ivory strips worth at least 50 gp each.",Legend Lore,Self,False,divination,Divination
+,1 action,False,Instantaneous,lesser-restoration,2,,Lesser Restoration,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 10 minutes,levitate,2,Either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end.,Levitate,60 feet,False,transmutation,Transmutation
+,1 action,False,1 hour,light,0,A firefly or phosphorescent moss.,Light,Touch,False,evocation,Evocation
+,1 action,False,Instantaneous,lightning-bolt,3,"A bit of fur and a rod of amber, crystal, or glass.",Lightning Bolt,Self,False,evocation,Evocation
+,1 action,False,Instantaneous,locate-animals-or-plants,2,A bit of fur from a bloodhound.,Locate Animals or Plants,Self,True,divination,Divination
+,1 action,True,Up to 1 hour,locate-creature,4,A bit of fur from a bloodhound.,Locate Creature,Self,False,divination,Divination
+,1 action,True,Up to 10 minutes,locate-object,2,A forked twig.,Locate Object,Self,False,divination,Divination
+,1 action,False,1 hour,longstrider,1,A pinch of dirt.,Longstrider,Touch,False,transmutation,Transmutation
+,1 action,False,8 hours,mage-armor,1,A piece of cured leather.,Mage Armor,Touch,False,abjuration,Abjuration
+,1 action,False,1 minute,mage-hand,0,,Mage Hand,30 feet,False,conjuration,Conjuration
+,1 minute,False,1 hour,magic-circle,3,"Holy water or powdered silver and iron worth at least 100 gp, which the spell consumes.",Magic Circle,10 feet,False,abjuration,Abjuration
+,1 minute,False,Until dispelled,magic-jar,6,"A gem, crystal, reliquary, or some other ornamental container worth at least 500 gp.",Magic Jar,Self,False,necromancy,Necromancy
+,1 action,False,Instantaneous,magic-missile,1,,Magic Missile,120 feet,False,evocation,Evocation
+,1 minute,False,Until dispelled,magic-mouth,2,"A honeycomb and jade dust of at least 10 inches, the spell consumes.",Magic Mouth,30 feet,True,illusion,Illusion
+,1 bonus action,True,Up to 1 hour,magic-weapon,2,,Magic Weapon,Touch,False,transmutation,Transmutation
+,1 minute,False,24 hours,magnificent-mansion,7,"A miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5 gp.",Magnificent Mansion,300 feet,False,conjuration,Conjuration
+,1 action,True,Up to 10 minutes,major-image,3,A bit of fleece.,Major Image,120 feet,False,illusion,Illusion
+,1 action,False,Instantaneous,mass-cure-wounds,5,,Mass Cure Wounds,60 feet,False,conjuration,Conjuration
+,1 action,False,Instantaneous,mass-heal,9,,Mass Heal,60 feet,False,conjuration,Conjuration
+,1 bonus action,False,Instantaneous,mass-healing-word,3,,Mass Healing Word,60 feet,False,evocation,Evocation
+,1 action,False,24 hours,mass-suggestion,6,A snake's tongue and either a bit of honeycomb or a drop of sweet oil.,Mass Suggestion,60 feet,False,enchantment,Enchantment
+,1 action,True,Up to 10 minutes,maze,8,,Maze,60 feet,False,conjuration,Conjuration
+,1 action,False,8 hours,meld-into-stone,3,,Meld Into Stone,Touch,True,transmutation,Transmutation
+,1 minute,False,Instantaneous,mending,0,Two lodestones.,Mending,Touch,False,transmutation,Transmutation
+,1 action,False,1 round,message,0,A short piece of copper wire.,Message,120 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,meteor-swarm,9,,Meteor Swarm,1 mile,False,evocation,Evocation
+,1 action,False,24 hours,mind-blank,8,,Mind Blank,Touch,False,abjuration,Abjuration
+,1 action,False,1 minute,minor-illusion,0,A bit of fleece.,Minor Illusion,30 feet,False,illusion,Illusion
+,10 minutes,False,10 days,mirage-arcane,7,,Mirage Arcane,Sight,False,illusion,Illusion
+,1 action,False,1 minute,mirror-image,2,,Mirror Image,Self,False,illusion,Illusion
+,1 action,True,Up to 1 hour,mislead,5,,Mislead,Self,False,illusion,Illusion
+,1 bonus action,False,Instantaneous,misty-step,2,,Misty Step,Self,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,modify-memory,5,,Modify Memory,30 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,moonbeam,2,Several seeds of any moonseed plant and a piece of opalescent feldspar.,Moonbeam,120 feet,False,evocation,Evocation
+,1 action,True,Up to 2 hours,move-earth,6,"An iron blade and a small bag containing a mixture of soils--clay, loam, and sand.",Move Earth,120 feet,False,transmutation,Transmutation
+,1 action,False,8 hours,nondetection,3,"A pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes.",Nondetection,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 1 hour,pass-without-trace,2,Ashes from a burned leaf of mistletoe and a sprig of spruce.,Pass Without Trace,Self,False,abjuration,Abjuration
+,1 action,False,1 hour,passwall,5,A pinch of sesame seeds.,Passwall,30 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,phantasmal-killer,4,,Phantasmal Killer,120 feet,False,illusion,Illusion
+,1 minute,False,1 hour,phantom-steed,3,,Phantom Steed,30 feet,True,illusion,Illusion
+,10 minutes,False,Instantaneous,planar-ally,6,,Planar Ally,60 feet,False,conjuration,Conjuration
+,1 hour,False,24 hours,planar-binding,5,"A jewel worth at least 1,000 gp, which the spell consumes.",Planar Binding,60 feet,False,abjuration,Abjuration
+melee,1 action,False,Instantaneous,plane-shift,7,"A forked, metal rod worth at least 250 gp, attuned to a particular plane of existence.",Plane Shift,Touch,False,conjuration,Conjuration
+,1 action,False,Instantaneous,plant-growth,3,,Plant Growth,150 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,poison-spray,0,,Poison Spray,10 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 hour,polymorph,4,A caterpillar cocoon.,Polymorph,60 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,power-word-kill,9,,Power Word Kill,60 feet,False,enchantment,Enchantment
+,1 action,False,Instantaneous,power-word-stun,8,,Power Word Stun,60 feet,False,enchantment,Enchantment
+,10 minutes,False,Instantaneous,prayer-of-healing,2,,Prayer of Healing,30 feet,False,evocation,Evocation
+,1 action,False,1 hour,prestidigitation,0,,Prestidigitation,10 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,prismatic-spray,7,,Prismatic Spray,Self,False,evocation,Evocation
+,1 action,False,10 minutes,prismatic-wall,9,,Prismatic Wall,60 feet,False,abjuration,Abjuration
+,10 minutes,False,24 hours,private-sanctum,4,"A thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite.",Private Sanctum,120 feet,False,abjuration,Abjuration
+ranged,1 action,False,10 minutes,produce-flame,0,,Produce Flame,Self,False,conjuration,Conjuration
+,1 action,False,Until dispelled,programmed-illusion,6,A bit of fleece and jade dust worth at least 25 gp.,Programmed Illusion,120 feet,False,illusion,Illusion
+,1 action,True,Up to 24 hours,project-image,7,A small replica of you made from materials worth at least 5 gp.,Project Image,500 miles,False,illusion,Illusion
+,1 action,True,Up to 1 hour,protection-from-energy,3,,Protection From Energy,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 10 minutes,protection-from-evil-and-good,1,"Holy water or powdered silver and iron, which the spell consumes.",Protection from Evil and Good,Touch,False,abjuration,Abjuration
+,1 action,False,1 hour,protection-from-poison,2,,Protection from Poison,Touch,False,abjuration,Abjuration
+,1 action,False,Instantaneous,purify-food-and-drink,1,,Purify Food and Drink,10 feet,True,transmutation,Transmutation
+,1 hour,False,Instantaneous,raise-dead,5,"A diamond worth at least 500gp, which the spell consumes.",Raise Dead,Touch,False,necromancy,Necromancy
+ranged,1 action,True,Up to 1 minute,ray-of-enfeeblement,2,,Ray of Enfeeblement,60 feet,False,necromancy,Necromancy
+ranged,1 action,False,Instantaneous,ray-of-frost,0,,Ray of Frost,60 feet,False,evocation,Evocation
+,1 minute,False,1 hour,regenerate,7,A prayer wheel and holy water.,Regenerate,Touch,False,transmutation,Transmutation
+,1 hour,False,Instantaneous,reincarnate,5,"Rare oils and unguents worth at least 1,000 gp, which the spell consumes.",Reincarnate,Touch,False,transmutation,Transmutation
+,1 action,False,Instantaneous,remove-curse,3,,Remove Curse,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 1 minute,resilient-sphere,4,A hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic.,Resilient Sphere,30 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,resistance,0,A miniature cloak.,Resistance,Touch,False,abjuration,Abjuration
+,1 hour,False,Instantaneous,resurrection,7,"A diamond worth at least 1,000gp, which the spell consumes.",Resurrection,Touch,False,necromancy,Necromancy
+,1 action,True,Up to 1 minute,reverse-gravity,7,A lodestone and iron filings.,Reverse Gravity,100 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,revivify,3,"Diamonds worth 300gp, which the spell consumes.",Revivify,Touch,False,conjuration,Conjuration
+,1 action,False,1 hour,rope-trick,2,Powdered corn extract and a twisted loop of parchment.,Rope Trick,Touch,False,transmutation,Transmutation
+,1 action,False,Instantaneous,sacred-flame,0,,Sacred Flame,60 feet,False,evocation,Evocation
+,1 bonus action,False,1 minute,sanctuary,1,A small silver mirror.,Sanctuary,30 feet,False,abjuration,Abjuration
+,1 action,False,Instantaneous,scorching-ray,2,,Scorching Ray,120 feet,False,evocation,Evocation
+,10 minutes,True,Up to 10 minutes,scrying,5,"A focus worth at least 1,000 gp, such as a crystal ball, a silver mirror, or a font filled with holy water.",Scrying,Self,False,divination,Divination
+,1 action,False,Instantaneous,secret-chest,4,"An exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp.",Secret Chest,Touch,False,conjuration,Conjuration
+,1 action,False,1 hour,see-invisibility,2,A dash of talc and a small amount of silver powder.,See Invisibility,Self,False,divination,Divination
+,1 action,False,8 hours,seeming,5,,Seeming,30 feet,False,illusion,Illusion
+,1 action,False,1 round,sending,3,A short piece of fine copper wire.,Sending,Unlimited,False,evocation,Evocation
+,1 action,False,Until dispelled,sequester,7,"A powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes.",Sequester,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 hour,shapechange,9,"A jade circlet worth at least 1,500 gp, which you must place on your head before you cast the spell.",Shapechange,Self,False,transmutation,Transmutation
+,1 action,False,Instantaneous,shatter,2,A burst of mica.,Shatter,60 feet,False,evocation,Evocation
+,1 reaction,False,1 round,shield,1,,Shield,Self,False,abjuration,Abjuration
+,1 bonus action,True,Up to 10 minutes,shield-of-faith,1,A small parchment with a bit of holy text written on it.,Shield of Faith,60 feet,False,abjuration,Abjuration
+,1 bonus action,False,1 minute,shillelagh,0,"Mistletoe, a shamrock leaf, and a club or quarterstaff.",Shillelagh,Touch,False,transmutation,Transmutation
+melee,1 action,False,Instantaneous,shocking-grasp,0,,Shocking Grasp,Touch,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,silence,2,,Silence,120 feet,True,illusion,Illusion
+,1 action,True,Up to 10 minutes,silent-image,1,A bit of fleece.,Silent Image,60 feet,False,illusion,Illusion
+,12 hours,False,Until dispelled,simulacrum,7,"Snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell.",Simulacrum,Touch,False,illusion,Illusion
+,1 action,False,1 minute,sleep,1,"A pinch of fine sand, rose petals, or a cricket.",Sleep,90 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,sleet-storm,3,A pinch of dust and a few drops of water.,Sleet Storm,150 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,slow,3,A drop of molasses.,Slow,120 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,spare-the-dying,0,,Spare the Dying,Touch,False,necromancy,Necromancy
+,1 action,False,10 minutes,speak-with-animals,1,,Speak with Animals,Self,True,divination,Divination
+,1 action,False,10 minutes,speak-with-dead,3,Burning incense.,Speak with Dead,10 feet,False,necromancy,Necromancy
+,1 action,False,10 minutes,speak-with-plants,3,,Speak with Plants,Self,False,transmutation,Transmutation
+,1 action,True,Up to 1 hour,spider-climb,2,A drop of bitumen and a spider.,Spider Climb,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 10 minutes,spike-growth,2,"Seven sharp thorns or seven small twigs, each sharpened to a point.",Spike Growth,150 feet,False,transmutation,Transmutation
+,1 action,True,Up to 10 minutes,spirit-guardians,3,A holy symbol.,Spirit Guardians,Self,False,conjuration,Conjuration
+melee,1 bonus action,False,1 minute,spiritual-weapon,2,,Spiritual Weapon,60 feet,False,evocation,Evocation
+,1 action,True,Up to 1 minute,stinking-cloud,3,A rotten egg or several skunk cabbage leaves.,Stinking Cloud,90 feet,False,conjuration,Conjuration
+,1 action,False,Instantaneous,stone-shape,4,"Soft clay, to be crudely worked into the desired shape for the stone object.",Stone Shape,Touch,False,transmutation,Transmutation
+,1 action,True,Up to 1 hour,stoneskin,4,"Diamond dust worth 100 gp, which the spell consumes.",Stoneskin,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 1 minute,storm-of-vengeance,9,,Storm of Vengeance,Sight,False,conjuration,Conjuration
+,1 action,True,Up to 8 hours,suggestion,2,A snake's tongue and either a bit of honeycomb or a drop of sweet oil.,Suggestion,30 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,sunbeam,6,A magnifying glass.,Sunbeam,Self,False,evocation,Evocation
+,1 action,False,Instantaneous,sunburst,8,Fire and a piece of sunstone.,Sunburst,150 feet,False,evocation,Evocation
+,1 minute,False,Until dispelled,symbol,7,"Mercury, phosphorus, and powdered diamond and opal with a total value of at least 1,000 gp, which the spell consumes.",Symbol,Touch,False,abjuration,Abjuration
+,1 action,True,Up to 10 minutes,telekinesis,5,,Telekinesis,60 feet,False,transmutation,Transmutation
+,1 action,False,1 hour,telepathic-bond,5,Pieces of eggshell from two different kinds of creatures,Telepathic Bond,30 feet,True,divination,Divination
+,1 action,False,Instantaneous,teleport,7,,Teleport,10 feet,False,conjuration,Conjuration
+,1 minute,False,1 round,teleportation-circle,5,"Rare chalks and inks infused with precious gems with 50 gp, which the spell consumes.",Teleportation Circle,10 feet,False,conjuration,Conjuration
+,1 action,False,1 minute,thaumaturgy,0,,Thaumaturgy,30 feet,False,transmutation,Transmutation
+,1 action,False,Instantaneous,thunderwave,1,,Thunderwave,Self,False,evocation,Evocation
+,1 action,False,Instantaneous,time-stop,9,,Time Stop,Self,False,transmutation,Transmutation
+,1 minute,False,8 hours,tiny-hut,3,A small crystal bead.,Tiny Hut,Self,True,evocation,Evocation
+,1 action,False,1 hour,tongues,3,A small clay model of a ziggurat.,Tongues,Touch,False,divination,Divination
+,1 action,False,1 round,transport-via-plants,6,,Transport via Plants,10 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,tree-stride,5,,Tree Stride,Self,False,conjuration,Conjuration
+,1 action,True,Up to 1 hour,true-polymorph,9,"A drop of mercury, a dollop of gum arabic, and a wisp of smoke.",True Polymorph,30 feet,False,transmutation,Transmutation
+,1 hour,False,Instantaneous,true-resurrection,9,"A sprinkle of holy water and diamonds worth at least 25,000gp, which the spell consumes.",True Resurrection,Touch,False,necromancy,Necromancy
+,1 action,False,1 hour,true-seeing,6,"An ointment for the eyes that costs 25gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell.",True Seeing,Touch,False,divination,Divination
+,1 action,True,Up to 1 round,true-strike,0,,True Strike,30 feet,False,divination,Divination
+,1 action,False,1 hour,unseen-servant,1,A piece of string and a bit of wood.,Unseen Servant,60 feet,True,conjuration,Conjuration
+melee,1 action,True,Up to 1 minute,vampiric-touch,3,,Vampiric Touch,Self,False,necromancy,Necromancy
+,1 action,False,Instantaneous,vicious-mockery,0,,Vicious Mockery,60 feet,False,enchantment,Enchantment
+,1 action,True,Up to 1 minute,wall-of-fire,4,A small piece of phosphorus.,Wall of Fire,120 feet,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,wall-of-force,5,A pinch of powder made by crushing a clear gemstone.,Wall of Force,120 feet,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,wall-of-ice,6,A small piece of quartz.,Wall of Ice,120 feet,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,wall-of-stone,5,A small block of granite.,Wall of Stone,120 feet,False,evocation,Evocation
+,1 action,True,Up to 10 minutes,wall-of-thorns,6,A handful of thorns.,Wall of Thorns,120 feet,False,conjuration,Conjuration
+,1 action,False,1 hour,warding-bond,2,"A pair of platinum rings worth at least 50gp each, which you and the target must wear for the duration.",Warding Bond,Touch,False,abjuration,Abjuration
+,1 action,False,24 hours,water-breathing,3,A short piece of reed or straw.,Water Breathing,30 feet,True,transmutation,Transmutation
+,1 action,False,1 hour,water-walk,3,A piece of cork.,Water Walk,30 feet,True,transmutation,Transmutation
+,1 action,True,Up to 1 hour,web,2,A bit of spiderweb.,Web,60 feet,False,conjuration,Conjuration
+,1 action,True,Up to 1 minute,weird,9,,Weird,120 feet,False,illusion,Illusion
+,1 minute,False,8 hours,wind-walk,6,Fire and holy water.,Wind Walk,30 feet,False,transmutation,Transmutation
+,1 action,True,Up to 1 minute,wind-wall,3,A tiny fan and a feather of exotic origin.,Wind Wall,120 feet,False,evocation,Evocation
+,1 action,False,Instantaneous,wish,9,,Wish,Self,False,conjuration,Conjuration
+,1 action,False,Instantaneous,word-of-recall,6,,Word of Recall,5 feet,False,conjuration,Conjuration
+,1 action,False,10 minutes,zone-of-truth,2,,Zone of Truth,60 feet,False,enchantment,Enchantment

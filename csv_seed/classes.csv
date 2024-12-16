@@ -1,0 +1,13 @@
+index,hit_die,name
+barbarian,12,Barbarian
+bard,8,Bard
+cleric,8,Cleric
+druid,8,Druid
+fighter,10,Fighter
+monk,8,Monk
+paladin,10,Paladin
+ranger,10,Ranger
+rogue,8,Rogue
+sorcerer,6,Sorcerer
+warlock,8,Warlock
+wizard,6,Wizard

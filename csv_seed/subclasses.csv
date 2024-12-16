@@ -1,0 +1,13 @@
+index,class_index,name,subclass_flavor
+berserker,barbarian,Berserker,Primal Path
+lore,bard,Lore,Bard College
+life,cleric,Life,Divine Domain
+land,druid,Land,Druid Circle
+champion,fighter,Champion,Martial Archetype
+open-hand,monk,Open Hand,Monastic Tradition
+devotion,paladin,Devotion,Sacred Oath
+hunter,ranger,Hunter,Ranger Archetype
+thief,rogue,Thief,Roguish Archetype
+draconic,sorcerer,Draconic,Sorcerous Origin
+fiend,warlock,Fiend,Otherworldly Patron
+evocation,wizard,Evocation,Arcane Tradition
