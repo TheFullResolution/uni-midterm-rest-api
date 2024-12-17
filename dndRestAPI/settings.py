@@ -9,9 +9,10 @@ environ.Env.read_env(BASE_DIR / '.env')
 SECRET_KEY = env("SECRET_KEY", default="dummy-secret-key-for-dev")
 DEBUG = env.bool("DEBUG", default=False)
 
+LOGIN_REDIRECT_URL = '/'
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.fly.dev']
 CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']
-
 
 # Application definition
 
@@ -23,7 +24,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'drf_yasg',
     'dndRestAPI',
 ]
 
@@ -42,7 +42,7 @@ ROOT_URLCONF = 'dndRestAPI.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Add this line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -55,9 +55,7 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'dndRestAPI.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -85,21 +83,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
-
+LOGOUT_REDIRECT_URL = '/'
 USE_I18N = True
 
 USE_TZ = True
-
-
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
