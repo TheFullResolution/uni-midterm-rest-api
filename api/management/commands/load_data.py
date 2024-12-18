@@ -1,12 +1,13 @@
 import os
 import csv
 import django
+from django.core.management.base import BaseCommand
 
 # Set up Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dndRestAPI.settings')
 django.setup()
 
-from dndRestAPI.models import Class, Proficiency, ClassProficiency, Race, ProficiencyClass, ProficiencyRace, \
+from api.models import Class, Proficiency, ClassProficiency, Race, ProficiencyClass, ProficiencyRace, \
     RaceStartingProficiency, Subrace, SubraceStartingProficiency, Subclass, SubclassDescription, School, Spell, \
     SpellDescription, SpellClass, SpellSubclass
 
@@ -194,7 +195,7 @@ def load_proficiencies_races(file_path):
             except Race.DoesNotExist:
                 subrace = Subrace.objects.get(index=row['ref_index'])
                 ProficiencyRace.objects.create(proficiency=proficiency, subrace=subrace)
-                
+
 
 def load_races_starting_proficiencies(file_path):
     """
@@ -283,24 +284,32 @@ def load_races_subraces(file_path):
     print("Races-Subraces relationships loaded.")
 
 
-if __name__ == "__main__":
-    # Update paths to your CSV files
-    base_dir = "csv_seed"
-    load_classes(os.path.join(base_dir, 'classes.csv'))
-    load_proficiencies(os.path.join(base_dir, 'proficiencies.csv'))
-    load_races(os.path.join(base_dir, 'races.csv'))
-    load_subraces(os.path.join(base_dir, 'subraces.csv'))
-    load_subclasses(os.path.join(base_dir, 'subclasses.csv'))
-    load_spells(os.path.join(base_dir, 'spells.csv'))
-    load_class_proficiencies(os.path.join(base_dir, 'classes_proficiencies.csv'))
-    load_proficiencies_classes(os.path.join(base_dir, 'proficiencies_classes.csv'))
-    load_proficiencies_races(os.path.join(base_dir, 'proficiencies_races.csv'))
-    load_races_starting_proficiencies(os.path.join(base_dir, 'races_starting_proficiencies.csv'))
-    load_subraces_starting_proficiencies(os.path.join(base_dir, 'subraces_starting_proficiencies.csv'))
-    load_subclasses_desc(os.path.join(base_dir, 'subclasses_desc.csv'))
-    load_classes_subclasses(os.path.join(base_dir, 'classes_subclasses.csv'))
-    load_races_subraces(os.path.join(base_dir, 'races_subraces.csv'))
-    load_spell_descriptions(os.path.join(base_dir, 'spells_desc.csv'))
-    load_spell_classes(os.path.join(base_dir, 'spells_classes.csv'))
-    load_spell_subclasses(os.path.join(base_dir, 'spells_subclasses.csv'))
-    print("All data loaded.")
+class Command(BaseCommand):
+    help = "Load data into the database from CSV files"
+
+    def handle(self, *args, **kwargs):
+        base_dir = os.path.join(os.path.dirname(__file__), "../../../csv_seed")
+
+        self.stdout.write("Starting data load...")
+
+        try:
+            load_classes(os.path.join(base_dir, 'classes.csv'))
+            load_proficiencies(os.path.join(base_dir, 'proficiencies.csv'))
+            load_races(os.path.join(base_dir, 'races.csv'))
+            load_subraces(os.path.join(base_dir, 'subraces.csv'))
+            load_subclasses(os.path.join(base_dir, 'subclasses.csv'))
+            load_spells(os.path.join(base_dir, 'spells.csv'))
+            load_class_proficiencies(os.path.join(base_dir, 'classes_proficiencies.csv'))
+            load_proficiencies_classes(os.path.join(base_dir, 'proficiencies_classes.csv'))
+            load_proficiencies_races(os.path.join(base_dir, 'proficiencies_races.csv'))
+            load_races_starting_proficiencies(os.path.join(base_dir, 'races_starting_proficiencies.csv'))
+            load_subraces_starting_proficiencies(os.path.join(base_dir, 'subraces_starting_proficiencies.csv'))
+            load_subclasses_desc(os.path.join(base_dir, 'subclasses_desc.csv'))
+            load_classes_subclasses(os.path.join(base_dir, 'classes_subclasses.csv'))
+            load_races_subraces(os.path.join(base_dir, 'races_subraces.csv'))
+            load_spell_descriptions(os.path.join(base_dir, 'spells_desc.csv'))
+            load_spell_classes(os.path.join(base_dir, 'spells_classes.csv'))
+            load_spell_subclasses(os.path.join(base_dir, 'spells_subclasses.csv'))
+            self.stdout.write(self.style.SUCCESS("All data loaded successfully."))
+        except Exception as e:
+            self.stderr.write(self.style.ERROR(f"An error occurred: {e}"))
