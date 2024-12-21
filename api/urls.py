@@ -1,40 +1,87 @@
 from rest_framework.routers import DefaultRouter
-from api.views import (
-    ClassViewSet,
-    ProficiencyViewSet,
-    RaceViewSet,
-    SpellViewSet,
-    SchoolViewSet,
-    SubclassViewSet,
-)
+from rest_framework.response import Response
+from rest_framework.renderers import TemplateHTMLRenderer
 
-# Initialize the router for automatic URL routing of ViewSets.
-router = DefaultRouter()
+from rest_framework.views import APIView
+from api.views import ClassViewSet, ProficiencyViewSet, RaceViewSet, SpellViewSet, SchoolViewSet, SubclassViewSet
 
-# Register the ClassViewSet for handling class-related endpoints.
-# The basename 'class' will be used to create URL patterns like /api/classes/.
+
+class CustomRouter(DefaultRouter):
+    def get_api_root_view(self, api_urls=None):
+        """
+        Return a custom API root view with an embedded overview and endpoint details.
+        """
+
+        class CustomApiRoot(APIView):
+            renderer_classes = [TemplateHTMLRenderer]
+            template_name = "api_root.html"
+
+            def get(self, request, *args, **kwargs):
+                # Data to pass to the template
+                context = {
+                    "overview": "This is a REST API built on top of a subset of D&D rules. "
+                                "The subset of data was adapted from the open-source project at "
+                                "<a href='https://5e-bits.github.io/docs/' target='_blank'>https://5e-bits.github.io/docs/</a>. "
+                                "Their data used a NoSQL JSON structure, while this project adapts it into a relational SQL database using SQLite.",
+                    "endpoints": [
+                        {
+                            "name": "Classes",
+                            "url": request.build_absolute_uri('classes/'),
+                            "methods": ["GET", "POST", "PATCH", "DELETE"],
+                            "description": "Endpoints for managing character classes, e.g., Wizard, Fighter.",
+                            "relations": "Each class can have subclasses and associated proficiencies.",
+                        },
+                        {
+                            "name": "Proficiencies",
+                            "url": request.build_absolute_uri('proficiencies/'),
+                            "methods": ["GET", "POST", "PATCH", "DELETE"],
+                            "description": "Endpoints for managing proficiencies such as skills or tools.",
+                            "relations": "Linked to classes and races to define their capabilities.",
+                        },
+                        {
+                            "name": "Races",
+                            "url": request.build_absolute_uri('races/'),
+                            "methods": ["GET", "POST", "PATCH", "DELETE"],
+                            "description": "Endpoints for managing character races, e.g., Elf, Dwarf.",
+                            "relations": "Each race can have subraces and associated proficiencies.",
+                        },
+                        {
+                            "name": "Spells",
+                            "url": request.build_absolute_uri('spells/'),
+                            "methods": ["GET", "POST", "PATCH", "DELETE"],
+                            "description": "Endpoints for managing spells, e.g., Fireball, Mage Hand.",
+                            "relations": "Spells are linked to classes and subclasses through magic schools.",
+                        },
+                        {
+                            "name": "Schools",
+                            "url": request.build_absolute_uri('schools/'),
+                            "methods": ["GET", "POST", "PATCH", "DELETE"],
+                            "description": "Endpoints for managing schools of magic, e.g., Evocation, Necromancy.",
+                            "relations": "Each spell belongs to a school of magic.",
+                        },
+                        {
+                            "name": "Subclasses",
+                            "url": request.build_absolute_uri('subclasses/'),
+                            "methods": ["GET", "POST", "PATCH", "DELETE"],
+                            "description": "Endpoints for managing subclasses, e.g., Evocation Wizard.",
+                            "relations": "Subclasses are linked to a parent class and can influence available spells.",
+                        },
+                    ]
+                }
+                return Response(context)
+
+        return CustomApiRoot.as_view()
+
+
+# Use the custom router instead of the DefaultRouter
+router = CustomRouter()
+
+# Register the viewsets as before
 router.register('classes', ClassViewSet, basename='class')
-
-# Register the ProficiencyViewSet for handling proficiency-related endpoints.
-# The basename 'proficiency' will generate URLs like /api/proficiencies/.
 router.register('proficiencies', ProficiencyViewSet, basename='proficiency')
-
-# Register the RaceViewSet for handling race-related endpoints.
-# The basename 'race' will generate URLs like /api/races/.
 router.register('races', RaceViewSet, basename='race')
-
-# Register the SpellViewSet for handling spell-related endpoints.
-# The basename 'spell' will generate URLs like /api/spells/.
 router.register('spells', SpellViewSet, basename='spell')
-
-# Register the SchoolViewSet for handling school-related endpoints.
-# The basename 'school' will generate URLs like /api/schools/.
 router.register('schools', SchoolViewSet, basename='school')
-
-# Register the SubclassViewSet for handling subclass-related endpoints.
-# The basename 'subclass' will generate URLs like /api/subclasses/.
 router.register('subclasses', SubclassViewSet, basename='subclass')
 
-# Assign the router-generated URLs to the urlpatterns variable.
-# This includes all the registered ViewSets' URL patterns.
 urlpatterns = router.urls

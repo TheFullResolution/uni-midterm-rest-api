@@ -1,5 +1,6 @@
 from pathlib import Path
 import environ
+import os
 
 # Initialize environment variables
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -49,6 +50,7 @@ ROOT_URLCONF = 'dndRestAPI.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,  # Automatically discover templates in installed apps
         'OPTIONS': {
             'context_processors': [
@@ -86,6 +88,9 @@ USE_TZ = True
 
 # Static Files Configuration
 STATIC_URL = 'static/'  # URL prefix for serving static files
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # This ensures the 'static' folder is included in collectstatic
+]
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory to collect static files for production
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Optimize static file delivery
 

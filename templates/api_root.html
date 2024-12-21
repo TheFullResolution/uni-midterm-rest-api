@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>API Root</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/simple.min.css' %}">
+    </head>
+    <body>
+        <h1>Welcome to the D&D REST API</h1>
+        <p>{{ overview|safe }}</p>
+        <h2>Available Endpoints</h2>
+        <ul>
+            {% for endpoint in endpoints %}
+                <li>
+                    <strong>{{ endpoint.name }}</strong>:
+                    <a href="{{ endpoint.url }}">{{ endpoint.url }}</a>
+                    <br>
+                    <em>Description:</em> {{ endpoint.description }}<br>
+                    <em>Methods:</em> {{ endpoint.methods|join:", " }}<br>
+                    <em>Relations:</em> {{ endpoint.relations }}
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
