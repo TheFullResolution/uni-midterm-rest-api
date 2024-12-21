@@ -1,7 +1,6 @@
 from django.urls import reverse
 from rest_framework import serializers
-from api.models import Class, ClassProficiency, Proficiency, SpellClass, Subclass, SubclassDescription
-from api.serializers.subclasses import SubclassDetailSerializer
+from api.models import Class, ClassProficiency, Proficiency, SpellClass
 
 
 class ClassSpellSerializer(serializers.ModelSerializer):

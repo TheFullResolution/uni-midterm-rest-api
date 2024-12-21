@@ -10,3 +10,4 @@ sqlparse==0.5.3
 uritemplate==4.1.1
 whitenoise==6.8.2
 django-environ~=0.11.2
+coverage==7.6.9

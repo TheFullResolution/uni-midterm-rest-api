@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.urls import reverse
-from api.models import Proficiency, ProficiencyClass, ProficiencyRace
+from api.models import Proficiency, ProficiencyClass, ProficiencyRace, Class
 
 
 # Serializer for detailed information about a Proficiency (read-only).
@@ -25,19 +25,29 @@ class ProficiencyDetailSerializer(serializers.ModelSerializer):
         Retrieve all classes associated with this proficiency.
         """
         classes = ProficiencyClass.objects.filter(proficiency=obj)
-        return [{'class_name': c.class_obj.name, 'class_url': reverse('class-detail', args=[c.class_obj.id])} for c in
-                classes]
+        return [
+            {
+                'class_name': c.class_obj.name,
+                'class_url': reverse('class-detail', args=[c.class_obj.id])
+            }
+            for c in classes
+        ]
 
     def get_races_and_subraces(self, obj):
         """
-        Retrieve all races and subraces associated with this proficiency.
+        Retrieve all races and subraces associated with this proficiency,
+        including clickable detail URLs using consistent logic.
         """
-        races = ProficiencyRace.objects.filter(proficiency=obj)
+        request = self.context.get('request')  # Access the current request context
+        races = obj.races_and_subraces.all()  # Uses the related_name from the ProficiencyRace model
         return [
             {
-                'race_name': r.race.name,
-                'subrace_name': r.subrace.name if r.subrace else None,
-                'race_url': reverse('race-detail', args=[r.race.id])
+                'race_name': r.race.name if r.race else "Unknown",
+                'subrace_name': r.subrace.name if r.subrace else "None",
+                'race_detail_url': request.build_absolute_uri(
+                    reverse('race-detail', args=[r.race.id])) if r.race else None,
+                'subrace_detail_url': request.build_absolute_uri(
+                    reverse('subrace-detail', args=[r.subrace.id])) if r.subrace else None,
             }
             for r in races
         ]
@@ -59,13 +69,12 @@ class ProficiencyListSerializer(serializers.ModelSerializer):
         return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
 
 
-# Serializer for creating and updating Proficiencies.
 class ProficiencyInputSerializer(serializers.ModelSerializer):
     associated_classes = serializers.PrimaryKeyRelatedField(
         many=True,
-        queryset=ProficiencyClass.objects.all(),
+        queryset=Class.objects.all(),  # Correct queryset for Class objects
         required=False,
-        source='proficiencyclass_set'  # Related name for reverse relation
+        source='proficiencyclass_set'  # Map to the reverse relation
     )
 
     class Meta:
@@ -74,28 +83,29 @@ class ProficiencyInputSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """
-        Create a Proficiency instance and handle relationships.
+        Create a Proficiency instance and establish relationships with Classes.
         """
         associated_classes = validated_data.pop('proficiencyclass_set', [])
+
         proficiency_instance = Proficiency.objects.create(**validated_data)
 
-        # Handle Many-to-Many relationship for associated classes
-        for cls in associated_classes:
-            ProficiencyClass.objects.create(proficiency=proficiency_instance, class_obj=cls.class_obj)
+        for class_obj in associated_classes:
+            ProficiencyClass.objects.create(proficiency=proficiency_instance, class_obj=class_obj)
 
         return proficiency_instance
 
     def update(self, instance, validated_data):
         """
-        Update a Proficiency instance and handle relationships.
+        Update a Proficiency instance and handle its relationships.
         """
         associated_classes = validated_data.pop('proficiencyclass_set', None)
 
         if associated_classes is not None:
-            # Clear existing relations and add new ones
+            # Clear existing relationships before adding new ones
             ProficiencyClass.objects.filter(proficiency=instance).delete()
-            for cls in associated_classes:
-                ProficiencyClass.objects.create(proficiency=instance, class_obj=cls.class_obj)
+            for class_obj in associated_classes:
+                # Add error handling for invalid Class objects
+                ProficiencyClass.objects.create(proficiency=instance, class_obj=class_obj)
 
         return super().update(instance, validated_data)
 
