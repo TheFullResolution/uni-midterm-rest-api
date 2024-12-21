@@ -1,68 +1,77 @@
 from rest_framework import serializers
 from django.urls import reverse
 
+from api.models import Class, SpellClass, ClassProficiency
 from api.serializers.proficiencies import ProficiencySerializer
-from api.models import Class, Subclass, SubclassDescription, SpellClass, Proficiency, ClassProficiency
 
 
+# Serializer to represent the relationship between a class and its spells.
 class ClassSpellSerializer(serializers.ModelSerializer):
+    # Displays the name of the associated spell.
     spell_name = serializers.CharField(source="spell.name", read_only=True)
+    # Provides the detail URL for the spell.
     detail_url = serializers.SerializerMethodField()
 
     class Meta:
         model = SpellClass
+        # Specifies the fields to include in the serialized output.
         fields = ['id', 'spell_name', 'detail_url']
 
     def get_detail_url(self, obj):
-        request = self.context.get('request')
+        """
+        Returns the absolute URL for the spell detail endpoint.
+        The URL is dynamically built using the current request context.
+        """
+        request = self.context.get('request')  # Access the current request context.
         return request.build_absolute_uri(reverse('spell-detail', args=[obj.spell.id]))
 
 
-class SubclassDescriptionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SubclassDescription
-        fields = ['value']
-
-
-class SubclassSerializer(serializers.ModelSerializer):
-    description = SubclassDescriptionSerializer()
-    detail_url = serializers.SerializerMethodField()
-
-    class Meta:
-        model = Subclass
-        fields = ['id', 'index', 'name', 'subclass_flavor', 'description', 'detail_url']
-
-    def get_detail_url(self, obj):
-        request = self.context.get('request')
-        return request.build_absolute_uri(reverse('subclass-detail', args=[obj.id]))
-
-
+# Serializer for displaying a list of classes with basic details.
 class ClassListSerializer(serializers.ModelSerializer):
+    # Provides the detail URL for the class.
     detail_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Class
+        # Specifies the fields to include in the serialized output.
         fields = ['id', 'name', 'detail_url']
 
     def get_detail_url(self, obj):
-        request = self.context.get('request')
+        """
+        Returns the absolute URL for the class detail endpoint.
+        The URL is dynamically built using the current request context.
+        """
+        request = self.context.get('request')  # Access the current request context.
         return request.build_absolute_uri(reverse('class-detail', args=[obj.id]))
 
 
+# Serializer for displaying detailed information about a specific class.
 class ClassDetailSerializer(serializers.ModelSerializer):
+    # Provides the detail URL for the class.
     detail_url = serializers.SerializerMethodField()
+    # Displays the list of proficiencies associated with the class.
     class_proficiencies = serializers.SerializerMethodField()
+    # Displays the list of spells associated with the class.
     spells = ClassSpellSerializer(many=True)
-    subclasses = SubclassSerializer(many=True)
 
     class Meta:
         model = Class
-        fields = ['id', 'index', 'hit_die', 'name', 'class_proficiencies', 'spells', 'subclasses', 'detail_url']
+        # Specifies the fields to include in the serialized output.
+        fields = ['id', 'index', 'hit_die', 'name', 'class_proficiencies', 'spells', 'detail_url']
 
     def get_detail_url(self, obj):
-        request = self.context.get('request')
+        """
+        Returns the absolute URL for the class detail endpoint.
+        The URL is dynamically built using the current request context.
+        """
+        request = self.context.get('request')  # Access the current request context.
         return request.build_absolute_uri(reverse('class-detail', args=[obj.id]))
 
     def get_class_proficiencies(self, obj):
-        proficiencies = ClassProficiency.objects.filter(class_obj=obj)
+        """
+        Retrieves and serializes the list of proficiencies associated with the given class.
+        Proficiency data is serialized using the ProficiencySerializer.
+        """
+        proficiencies = ClassProficiency.objects.filter(class_obj=obj)  # Query for related proficiencies.
+        # Serialize and return the proficiency data.
         return ProficiencySerializer([p.proficiency for p in proficiencies], many=True, context=self.context).data

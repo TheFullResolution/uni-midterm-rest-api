@@ -1,31 +1,35 @@
 from pathlib import Path
-
 import environ
 
+# Initialize environment variables
 BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / '.env')
 
-SECRET_KEY = env("SECRET_KEY", default="dummy-secret-key-for-dev")
-DEBUG = env.bool("DEBUG", default=False)
+# Security and Debug Settings
+SECRET_KEY = env("SECRET_KEY", default="dummy-secret-key-for-dev")  # Secret key for encryption
+DEBUG = env.bool("DEBUG", default=False)  # Enable debug mode in development
 
-LOGIN_REDIRECT_URL = '/'
+# Allowed Hosts and CSRF Configuration
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.fly.dev']  # Hosts allowed to serve the application
+CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']  # Trusted origins for CSRF protection
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.fly.dev']
-CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']
-
-# Application definition
-
+# Application Definition
 INSTALLED_APPS = [
+    # Default Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'dndRestAPI',
-    'api',
+
+    # Third-party apps
+    'rest_framework',  # Django REST framework for API development
+
+    # Local apps
+    'dndRestAPI',  # Project-specific app
+    'api',  # API app for handling endpoints
 ]
 
 MIDDLEWARE = [
@@ -38,12 +42,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# URL Configuration
 ROOT_URLCONF = 'dndRestAPI.urls'
 
+# Template Configuration
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'APP_DIRS': True,
+        'APP_DIRS': True,  # Automatically discover templates in installed apps
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -55,45 +61,37 @@ TEMPLATES = [
     },
 ]
 
+# WSGI Application
 WSGI_APPLICATION = 'dndRestAPI.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-
+# Database Configuration
+# Default to SQLite, can be overridden via DATABASE_URL in the .env file
 DATABASES = {
     'default': env.db('DATABASE_URL', default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
-
+# Password Validation
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
+# Localization Settings
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-LOGOUT_REDIRECT_URL = '/'
 USE_I18N = True
-
 USE_TZ = True
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Static Files Configuration
+STATIC_URL = 'static/'  # URL prefix for serving static files
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory to collect static files for production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Optimize static file delivery
 
+# Redirect URLs for Login and Logout
+LOGIN_REDIRECT_URL = '/'  # Redirect after successful login
+LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+
+# Default Primary Key Field Type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

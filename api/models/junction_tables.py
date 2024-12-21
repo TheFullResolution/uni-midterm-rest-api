@@ -1,8 +1,9 @@
 from django.db import models
-from .classes import Class, Subclass
+from .classes import Class
 from .proficiencies import Proficiency
 from .races import Race, Subrace
 from .spells import Spell
+from .subclasses import Subclass
 
 
 class ClassProficiency(models.Model):
