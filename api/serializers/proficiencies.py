@@ -3,24 +3,61 @@ from django.urls import reverse
 from api.models import Proficiency, ProficiencyClass, ProficiencyRace
 
 
-# Serializer for the Proficiency model, representing detailed information about a proficiency.
-class ProficiencySerializer(serializers.ModelSerializer):
-    # Provides the detail URL for the proficiency.
+# Serializer for detailed information about a Proficiency (read-only).
+class ProficiencyDetailSerializer(serializers.ModelSerializer):
+    detail_url = serializers.SerializerMethodField()
+    proficiency_classes = serializers.SerializerMethodField(read_only=True)
+    races_and_subraces = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Proficiency
+        fields = '__all__'
+
+    def get_detail_url(self, obj):
+        request = self.context.get('request')
+        return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
+
+    def get_proficiency_classes(self, obj):
+        """
+        Retrieve all classes associated with this proficiency.
+        """
+        classes = ProficiencyClass.objects.filter(proficiency=obj)
+        return [{'class_name': c.class_obj.name, 'class_url': reverse('class-detail', args=[c.class_obj.id])} for c in
+                classes]
+
+    def get_races_and_subraces(self, obj):
+        """
+        Retrieve all races and subraces associated with this proficiency.
+        """
+        races = ProficiencyRace.objects.filter(proficiency=obj)
+        return [
+            {
+                'race_name': r.race.name,
+                'subrace_name': r.subrace.name if r.subrace else None,
+                'race_url': reverse('race-detail', args=[r.race.id])
+            }
+            for r in races
+        ]
+
+
+# Serializer for listing Proficiencies with minimal details (read-only).
+class ProficiencyListSerializer(serializers.ModelSerializer):
     detail_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Proficiency
-        # Includes all fields from the model and sets depth for nested serialization.
-        fields = '__all__'
-        depth = 2
+        fields = ['id', 'name', 'type', 'detail_url']
 
     def get_detail_url(self, obj):
-        """
-        Returns the absolute URL for the proficiency detail endpoint.
-        The URL is dynamically built using the current request context.
-        """
-        request = self.context.get('request')  # Access the current request context.
+        request = self.context.get('request')
         return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
+
+
+# Serializer for creating and updating Proficiencies.
+class ProficiencyInputSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Proficiency
+        fields = '__all__'  # Allow all fields for create and update
 
 
 # Serializer for associating a proficiency with a class.
@@ -55,35 +92,3 @@ class ProficiencyRaceSerializer(serializers.ModelSerializer):
         model = ProficiencyRace
         # Specifies the fields to include in the serialized output.
         fields = ['race_name', 'subrace_name']
-
-
-# Serializer for listing proficiencies with minimal details.
-class ProficiencyListSerializer(serializers.ModelSerializer):
-    # Provides the detail URL for the proficiency.
-    detail_url = serializers.SerializerMethodField()
-
-    class Meta:
-        model = Proficiency
-        # Specifies the fields to include in the serialized output.
-        fields = ['id', 'name', 'type', 'detail_url']
-
-    def get_detail_url(self, obj):
-        """
-        Returns the absolute URL for the proficiency detail endpoint.
-        The URL is dynamically built using the current request context.
-        """
-        request = self.context.get('request')  # Access the current request context.
-        return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
-
-
-# Serializer for providing detailed information about a proficiency.
-class ProficiencyDetailSerializer(serializers.ModelSerializer):
-    # Lists all classes associated with the proficiency.
-    proficiency_classes = ProficiencyClassSerializer(many=True)
-    # Lists all races and subraces associated with the proficiency.
-    races_and_subraces = ProficiencyRaceSerializer(many=True)
-
-    class Meta:
-        model = Proficiency
-        # Specifies the fields to include in the serialized output.
-        fields = ['id', 'index', 'name', 'type', 'proficiency_classes', 'races_and_subraces']
