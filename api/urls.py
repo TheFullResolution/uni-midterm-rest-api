@@ -12,7 +12,7 @@ class CustomRouter(DefaultRouter):
         Return a custom API root view with an embedded overview and endpoint details.
         """
 
-        class CustomApiRoot(APIView):
+        class ApiRoot(APIView):
             renderer_classes = [TemplateHTMLRenderer]
             template_name = "api_root.html"
 
@@ -70,7 +70,7 @@ class CustomRouter(DefaultRouter):
                 }
                 return Response(context)
 
-        return CustomApiRoot.as_view()
+        return ApiRoot.as_view()
 
 
 # Use the custom router instead of the DefaultRouter

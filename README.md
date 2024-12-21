@@ -1,4 +1,4 @@
-# uni-midterm-rest-api
+# D&D REST API
 
 ## Project Overview
 
@@ -8,6 +8,10 @@ schools, subclasses, and related data for a role-playing game scenario.
 
 The application follows best practices for API design, implements serializers for structured data, and provides dynamic
 URLs for resource detail views.
+
+## Hosted API
+
+The project is hosted on https://fly.io/ and can be accessed at https://uni-midterm-rest-api.fly.dev/
 
 ## Features
 
@@ -81,61 +85,84 @@ python manage.py runserver
 | Endpoint                   | Method | Description                     |
 |----------------------------|--------|---------------------------------|
 | `/api/classes/`            | GET    | List all classes                |
+| `/api/classes/`            | POST   | Create a new class              |
 | `/api/classes/<id>/`       | GET    | Retrieve a specific class       |
+| `/api/classes/<id>/`       | PATCH  | Update a specific class         |
+| `/api/classes/<id>/`       | DELETE | Delete a specific class         |
 | `/api/proficiencies/`      | GET    | List all proficiencies          |
+| `/api/proficiencies/`      | POST   | Create a new proficiency        |
 | `/api/proficiencies/<id>/` | GET    | Retrieve a specific proficiency |
+| `/api/proficiencies/<id>/` | PATCH  | Update a specific proficiency   |
+| `/api/proficiencies/<id>/` | DELETE | Delete a specific proficiency   |
 | `/api/races/`              | GET    | List all races                  |
+| `/api/races/`              | POST   | Create a new race               |
 | `/api/races/<id>/`         | GET    | Retrieve a specific race        |
+| `/api/races/<id>/`         | PATCH  | Update a specific race          |
+| `/api/races/<id>/`         | DELETE | Delete a specific race          |
 | `/api/spells/`             | GET    | List all spells                 |
+| `/api/spells/`             | POST   | Create a new spell              |
 | `/api/spells/<id>/`        | GET    | Retrieve a specific spell       |
+| `/api/spells/<id>/`        | PATCH  | Update a specific spell         |
+| `/api/spells/<id>/`        | DELETE | Delete a specific spell         |
 | `/api/schools/`            | GET    | List all schools of magic       |
+| `/api/schools/`            | POST   | Create a new school             |
 | `/api/schools/<id>/`       | GET    | Retrieve a specific school      |
+| `/api/schools/<id>/`       | PATCH  | Update a specific school        |
+| `/api/schools/<id>/`       | DELETE | Delete a specific school        |
 | `/api/subclasses/`         | GET    | List all subclasses             |
+| `/api/subclasses/`         | POST   | Create a new subclass           |
 | `/api/subclasses/<id>/`    | GET    | Retrieve a specific subclass    |
+| `/api/subclasses/<id>/`    | PATCH  | Update a specific subclass      |
+| `/api/subclasses/<id>/`    | DELETE | Delete a specific subclass      |
 
-For detailed response structures, refer to the serializers in the api/serializers/ directory.
+For detailed response structures, refer to the serializers in the `api/serializers/` directory.
 
-File Structure
+## File Structure
 
+```plaintext
+├── api/                              # Core application logic for the REST API
+│   ├── management/                   # Custom management commands
+│   │   ├── commands/                 # Contains the load_data command for seeding data
+│   ├── migrations/                   # Tracks database schema changes
+│   ├── models/                       # Database models for Classes, Proficiencies, Races, etc.
+│   ├── serializers/                  # Serializers for transforming models into JSON responses
+│   ├── tests/                        # Unit tests for the API endpoints
+│   ├── views/                        # ViewSets for handling API requests
+│   ├── urls.py                       # API URL routing
+│   ├── permissions.py                # Custom permission classes
+├── csv_seed/                         # CSV files for seeding the database
+│   ├── …                           # Contains CSV files for Classes, Proficiencies, Races, Spells, etc.
+├── dndRestAPI/                       # Django project folder with settings and configurations
+│   ├── …                           # Includes settings.py, asgi.py, wsgi.py, and other configuration files
+├── static/                           # Static files (CSS, JS, etc.)
+│   ├── css/                          # CSS files for styling
+│       ├── simple.min.css            # Styling using Simple.css
+├── templates/                        # HTML templates for the API root and other views
+│   ├── api_root.html                 # Template for the API root view
+├── manage.py                         # Django management script
+├── requirements.txt                  # Python dependencies
 ```
-uni-midterm-rest-api/
-├── api/
-│   ├── serializers/         # Serializers for data representation
-│   ├── views/               # ViewSets for API logic
-│   ├── urls.py              # API routing
-│   ├── models.py            # Database models
-│   ├── tests.py             # Unit tests for endpoints
-├── dndRestAPI/
-│   ├── settings.py          # Project settings
-│   ├── urls.py              # Root URL configuration
-├── manage.py                # Django management script
-├── requirements.txt         # Python dependencies
-├── README.md                # Project documentation (this file)
-└── .env                     # Environment variables
 
-```
+# Development
 
-Known Issues
-• Admin Middleware Error: Ensure SessionMiddleware is included in MIDDLEWARE before AuthenticationMiddleware.
-
-Development
-
-Testing
+## Testing
 
 To run unit tests:
 
+```bash
 python manage.py test
+```
 
-Running the Server
+## Running the Server
 
+```bash
 python manage.py runserver
+```
 
-Contributions
+## Loading Data
 
-This project is intended for coursework purposes, and external contributions are not expected.
+To load data from CSV files:
 
-For questions or issues, contact the developer through your university communication channels.
-
-Author
-
-Developed as part of the CM3035 - Advanced Web Development module midterm assignment.
+```bash
+python manage.py load_data
+```
