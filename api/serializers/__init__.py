@@ -1,8 +1,6 @@
 from .classes import ClassListSerializer, ClassDetailSerializer, ClassSpellSerializer, ClassInputSerializer
 from .proficiencies import (
     ProficiencyListSerializer,
-    ProficiencyClassSerializer,
-    ProficiencyRaceSerializer,
     ProficiencyDetailSerializer,
     ProficiencyInputSerializer,
 )

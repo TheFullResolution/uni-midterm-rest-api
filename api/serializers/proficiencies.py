@@ -14,6 +14,9 @@ class ProficiencyDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_detail_url(self, obj):
+        """
+        Returns the absolute URL for the proficiency detail endpoint.
+        """
         request = self.context.get('request')
         return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
 
@@ -49,15 +52,52 @@ class ProficiencyListSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'type', 'detail_url']
 
     def get_detail_url(self, obj):
+        """
+        Returns the absolute URL for the proficiency detail endpoint.
+        """
         request = self.context.get('request')
         return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
 
 
 # Serializer for creating and updating Proficiencies.
 class ProficiencyInputSerializer(serializers.ModelSerializer):
+    associated_classes = serializers.PrimaryKeyRelatedField(
+        many=True,
+        queryset=ProficiencyClass.objects.all(),
+        required=False,
+        source='proficiencyclass_set'  # Related name for reverse relation
+    )
+
     class Meta:
         model = Proficiency
-        fields = '__all__'  # Allow all fields for create and update
+        fields = '__all__'
+
+    def create(self, validated_data):
+        """
+        Create a Proficiency instance and handle relationships.
+        """
+        associated_classes = validated_data.pop('proficiencyclass_set', [])
+        proficiency_instance = Proficiency.objects.create(**validated_data)
+
+        # Handle Many-to-Many relationship for associated classes
+        for cls in associated_classes:
+            ProficiencyClass.objects.create(proficiency=proficiency_instance, class_obj=cls.class_obj)
+
+        return proficiency_instance
+
+    def update(self, instance, validated_data):
+        """
+        Update a Proficiency instance and handle relationships.
+        """
+        associated_classes = validated_data.pop('proficiencyclass_set', None)
+
+        if associated_classes is not None:
+            # Clear existing relations and add new ones
+            ProficiencyClass.objects.filter(proficiency=instance).delete()
+            for cls in associated_classes:
+                ProficiencyClass.objects.create(proficiency=instance, class_obj=cls.class_obj)
+
+        return super().update(instance, validated_data)
 
 
 # Serializer for associating a proficiency with a class.
@@ -92,3 +132,23 @@ class ProficiencyRaceSerializer(serializers.ModelSerializer):
         model = ProficiencyRace
         # Specifies the fields to include in the serialized output.
         fields = ['race_name', 'subrace_name']
+
+
+# Serializer for the Proficiency model, representing detailed information about a proficiency.
+class ProficiencySerializer(serializers.ModelSerializer):
+    # Provides the detail URL for the proficiency.
+    detail_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Proficiency
+        # Includes all fields from the model and sets depth for nested serialization.
+        fields = '__all__'
+        depth = 2
+
+    def get_detail_url(self, obj):
+        """
+        Returns the absolute URL for the proficiency detail endpoint.
+        The URL is dynamically built using the current request context.
+        """
+        request = self.context.get('request')  # Access the current request context.
+        return request.build_absolute_uri(reverse('proficiency-detail', args=[obj.id]))
