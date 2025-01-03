@@ -10,10 +10,10 @@ from .base_viewsets import NoPutModelViewSet
 class ClassViewSet(NoPutModelViewSet):
     """
     Handles CRUD operations for Class instances.
-    - List: Returns a summarized view of all classes.
-    - Detail: Returns detailed information.
-    - Create/Update: Relies on ClassInputSerializer for linking proficiencies.
-    - Supports POST, PATCH, and DELETE actions.
+    - List View: Returns a summary of all classes using ClassListSerializer.
+    - Detail View: Provides detailed information using ClassDetailSerializer.
+    - Create/Update: Supports input operations using ClassInputSerializer.
+    - Supports HTTP methods: POST, PATCH, and DELETE (no PUT).
     """
     queryset = Class.objects.prefetch_related(
         'class_proficiencies__proficiency',
@@ -22,6 +22,12 @@ class ClassViewSet(NoPutModelViewSet):
     ).all()
 
     def get_serializer_class(self):
+        """
+        Determines the appropriate serializer class based on the current action.
+        - 'list': Uses ClassListSerializer for summarized data.
+        - 'create', 'update', 'partial_update': Uses ClassInputSerializer for handling input data.
+        - Default: Uses ClassDetailSerializer for detailed views.
+        """
         if self.action == 'list':
             return ClassListSerializer
         elif self.action in ['create', 'update', 'partial_update']:
@@ -29,12 +35,24 @@ class ClassViewSet(NoPutModelViewSet):
         return ClassDetailSerializer
 
     def perform_create(self, serializer):
-        # We rely on the serializer to handle proficiencies.
+        """
+        Custom logic for creating a Class instance.
+        - Saves the instance using the provided serializer.
+        - Handles any additional relational data if required.
+        """
         serializer.save()
 
     def perform_update(self, serializer):
-        # Same here: the serializer handles clearing and adding proficiencies.
+        """
+        Custom logic for updating a Class instance.
+        - Updates the instance with the provided serializer.
+        - Handles any additional logic for updating relational data if required.
+        """
         serializer.save()
 
     def perform_destroy(self, instance):
+        """
+        Custom logic for deleting a Class instance.
+        - Deletes the instance and ensures any cascading deletions are handled.
+        """
         instance.delete()
