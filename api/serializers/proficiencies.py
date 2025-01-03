@@ -24,11 +24,12 @@ class ProficiencyDetailSerializer(serializers.ModelSerializer):
         """
         Retrieves all classes associated with this proficiency, including their names and detail URLs.
         """
+        request = self.context.get('request')
         classes = ProficiencyClass.objects.filter(proficiency=obj)
         return [
             {
                 'class_name': c.class_obj.name,
-                'class_url': reverse('class-detail', args=[c.class_obj.id])
+                'class_url': request.build_absolute_uri(reverse('class-detail', args=[c.class_obj.id])),
             }
             for c in classes
         ]
